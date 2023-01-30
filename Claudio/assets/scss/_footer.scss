@@ -1,0 +1,23 @@
+@import "./variables";
+
+footer {
+  height: 150px;
+  background-color: $my-footer-bg-color;
+  border-top: 2px solid $my-border-bottom-color;
+  color: $my-brightest-one;
+}
+
+@media screen and (max-width: 501px) {
+  footer {
+    height: auto;
+    width: auto;
+  }
+}
+
+.my_footer_text {
+  color: $my-footer-text-color;
+}
+
+.my_footer_text:hover {
+  color: $my-brightest-one;
+}

@@ -1,0 +1,62 @@
+@import "./variables";
+
+//nav_button//
+.nav_button {
+  background-color: $my-buttons-bg-color;
+  border-radius: 5px;
+  display: inline-block;
+  color: $my-buttons-text-color;
+  font-size: 15px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: all 0.5s ease-in-out;
+}
+
+.nav_button.toggle-btn--dark {
+  background-color: $dark-my-buttons-bg-color;
+  color: $dark-my-buttons-text-color;
+}
+
+.nav_button:hover {
+  transform: scale(1.05);
+  color: $my-brightest-one;
+}
+
+.nav_button:active {
+  position: relative;
+  top: 1px;
+  color: $my-brightest-one !important;
+}
+
+//dark mode button//
+
+#toggle-btn {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background-color: $my-buttons-bg-color;
+  background-image: url("../img/dark_mode_toggle/brightness-high-fill.svg");
+  background-size: 50%;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 5px;
+  position: relative;
+  left: 10px;
+  cursor: pointer;
+  border: 1px solid $my-darkest-one;
+  transition: all 0.5s ease-in-out;
+}
+
+#toggle-btn:hover {
+  transform: scale(1.05);
+  color: $my-brightest-one;
+}
+
+#toggle-btn.toggle-btn--dark {
+  background-color: $dark-my-buttons-bg-color;
+  background-image: url("../img/dark_mode_toggle/moon-fill.svg");
+  background-size: 50%;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: 1px solid $dark-my-darkest-one;
+}

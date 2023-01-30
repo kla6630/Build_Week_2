@@ -1,122 +1,3 @@
-@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css");
-@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
-/*TEXT FEATURES*/
-/*FONTS*/
-/*h1*/
-/*h2*/
-/*h3*/
-/*h4*/
-/*h5*/
-/*Body Background Image*/
-/*Primo Piano Background Image*/
-/*TEXT FEATURES*/
-/*FONTS*/
-/*h1*/
-/*h2*/
-/*h3*/
-/*h4*/
-/*h5*/
-/*Body Background Image*/
-/*Primo Piano Background Image*/
-body {
-  background-color: rgb(20, 20, 20);
-  background-image: none;
-  background-attachment: fixed;
-  background-size: cover;
-  font-family: "Roboto", monospace;
-  z-index: 1;
-}
-
-/*TEXT FEATURES*/
-/*FONTS*/
-/*h1*/
-/*h2*/
-/*h3*/
-/*h4*/
-/*h5*/
-/*Body Background Image*/
-/*Primo Piano Background Image*/
-.dark-mode body {
-  background-color: rgb(64, 108, 156);
-  background-image: url("../img/bg/wp-dark.jpg");
-}
-.dark-mode nav {
-  background-color: #172e47;
-  border-bottom-color: rgb(78, 126, 230);
-}
-.dark-mode .my_logo,
-.dark-mode .my_nav_link {
-  color: rgb(188, 200, 228);
-}
-.dark-mode .my_nav_link:hover,
-.dark-mode .nav_social_icons:hover {
-  color: black;
-}
-.dark-mode header {
-  background-color: rgb(64, 108, 156);
-  border-bottom-color: rgb(78, 126, 230);
-}
-.dark-mode .my_spotlight_card {
-  border-color: rgb(78, 126, 230);
-  background-color: black;
-  color: white;
-}
-.dark-mode .my_spotlight_card_body {
-  background-color: black;
-  color: white;
-}
-.dark-mode .partners_logos_container {
-  border-color: rgb(78, 126, 230);
-  background-color: #172e47;
-}
-.dark-mode .my_carousel_card {
-  background-color: rgb(40, 60, 102);
-  color: white;
-  border-color: rgb(78, 126, 230);
-}
-.dark-mode .my_carousel_card img {
-  background-color: rgb(40, 60, 102);
-}
-.dark-mode .card-body {
-  background-color: black;
-}
-.dark-mode footer {
-  border-top-color: rgb(78, 126, 230);
-  color: black;
-  background-color: rgb(40, 60, 102);
-}
-.dark-mode .my_footer_text {
-  color: rgb(157, 191, 227);
-}
-.dark-mode .my_footer_text:hover {
-  color: black;
-}
-
-/*TEXT FEATURES*/
-/*FONTS*/
-/*h1*/
-/*h2*/
-/*h3*/
-/*h4*/
-/*h5*/
-/*Body Background Image*/
-/*Primo Piano Background Image*/
-header {
-  background-color: #e4f5d8;
-  min-height: 300px;
-  background-image: url("../img/astro_programmer.png");
-  background-repeat: no-repeat;
-  background-size: 500px auto;
-  background-position: center;
-  padding-top: 15%;
-  border-bottom: solid 1px #2a3324;
-}
-
-@media screen and (max-width: 992px) {
-  header {
-    background-image: none;
-  }
-}
 .page-wrapper {
   height: 100vh;
 }
@@ -134,6 +15,7 @@ header {
 }
 
 /*----------------toggeled sidebar----------------*/
+
 .page-wrapper.toggled .sidebar-wrapper {
   left: 0px;
 }
@@ -143,6 +25,7 @@ header {
     padding-left: 300px;
   }
 }
+
 /*----------------show sidebar button----------------*/
 #show-sidebar {
   position: fixed;
@@ -158,6 +41,7 @@ header {
 }
 
 /*----------------sidebar-wrapper----------------*/
+
 .sidebar-wrapper {
   width: 260px;
   height: 100%;
@@ -179,6 +63,7 @@ header {
 }
 
 /*----------------sidebar-content----------------*/
+
 .sidebar-content {
   max-height: calc(100% - 30px);
   height: calc(100% - 30px);
@@ -191,13 +76,14 @@ header {
 }
 
 /*--------------------sidebar-brand----------------------*/
+
 .sidebar-wrapper .sidebar-brand {
   padding: 10px 20px;
   display: flex;
   align-items: center;
 }
 
-.sidebar-wrapper .sidebar-brand > a {
+.sidebar-wrapper .sidebar-brand>a {
   text-transform: uppercase;
   font-weight: bold;
   flex-grow: 1;
@@ -209,6 +95,7 @@ header {
 }
 
 /*--------------------sidebar-header----------------------*/
+
 .sidebar-wrapper .sidebar-header {
   padding: 20px;
   overflow: hidden;
@@ -224,8 +111,7 @@ header {
 }
 
 .sidebar-wrapper .sidebar-header .user-pic img {
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   height: 100%;
   width: 100%;
 }
@@ -234,7 +120,7 @@ header {
   float: left;
 }
 
-.sidebar-wrapper .sidebar-header .user-info > span {
+.sidebar-wrapper .sidebar-header .user-info>span {
   display: block;
 }
 
@@ -254,11 +140,13 @@ header {
 }
 
 /*-----------------------sidebar-search------------------------*/
-.sidebar-wrapper .sidebar-search > div {
+
+.sidebar-wrapper .sidebar-search>div {
   padding: 10px 20px;
 }
 
 /*----------------------sidebar-menu-------------------------*/
+
 .sidebar-wrapper .sidebar-menu {
   padding-bottom: 10px;
 }
@@ -288,20 +176,21 @@ header {
   border-radius: 4px;
 }
 
-.sidebar-wrapper .sidebar-menu ul li a:hover > i::before {
+.sidebar-wrapper .sidebar-menu ul li a:hover>i::before {
   display: inline-block;
-  -webkit-animation: swing ease-in-out 0.5s 1 alternate;
-          animation: swing ease-in-out 0.5s 1 alternate;
+  animation: swing ease-in-out 0.5s 1 alternate;
 }
 
-.sidebar-wrapper .sidebar-menu .sidebar-dropdown > a:after {
+.sidebar-wrapper .sidebar-menu .sidebar-dropdown>a:after {
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
+
   font-style: normal;
   display: inline-block;
   font-style: normal;
   font-variant: normal;
   text-rendering: auto;
+
   text-align: center;
   background: 0 0;
   position: absolute;
@@ -356,6 +245,7 @@ header {
 }
 
 /*--------------------------side-footer------------------------------*/
+
 .sidebar-footer {
   position: absolute;
   width: 100%;
@@ -363,7 +253,7 @@ header {
   display: flex;
 }
 
-.sidebar-footer > a {
+.sidebar-footer>a {
   flex-grow: 1;
   text-align: center;
   height: 30px;
@@ -371,7 +261,7 @@ header {
   position: relative;
 }
 
-.sidebar-footer > a .notification {
+.sidebar-footer>a .notification {
   position: absolute;
   top: 0;
 }
@@ -388,6 +278,7 @@ header {
 
 
 /*--------------------------page-content-----------------------------*/
+
 .page-wrapper .page-content {
   display: inline-block;
   width: 100%;
@@ -395,7 +286,7 @@ header {
   padding-top: 20px;
 }
 
-.page-wrapper .page-content > div {
+.page-wrapper .page-content>div {
   padding: 20px 40px;
 }
 
@@ -404,6 +295,7 @@ header {
 }
 
 /*------scroll bar---------------------*/
+
 ::-webkit-scrollbar {
   width: 5px;
   height: 7px;
@@ -446,7 +338,9 @@ header {
   background: transparent;
 }
 
+
 /*-----------------------------chiller-theme-------------------------------------------------*/
+
 .chiller-theme .sidebar-wrapper {
   background: #000000;
 }
@@ -468,17 +362,17 @@ header {
 .chiller-theme .sidebar-wrapper .sidebar-header .user-info .user-status,
 .chiller-theme .sidebar-wrapper .sidebar-search input.search-menu,
 .chiller-theme .sidebar-wrapper .sidebar-search .input-group-text,
-.chiller-theme .sidebar-wrapper .sidebar-brand > a,
+.chiller-theme .sidebar-wrapper .sidebar-brand>a,
 .chiller-theme .sidebar-wrapper .sidebar-menu ul li a,
-.chiller-theme .sidebar-footer > a {
+.chiller-theme .sidebar-footer>a {
   color: #818896;
 }
 
-.chiller-theme .sidebar-wrapper .sidebar-menu ul li:hover > a,
-.chiller-theme .sidebar-wrapper .sidebar-menu .sidebar-dropdown.active > a,
+.chiller-theme .sidebar-wrapper .sidebar-menu ul li:hover>a,
+.chiller-theme .sidebar-wrapper .sidebar-menu .sidebar-dropdown.active>a,
 .chiller-theme .sidebar-wrapper .sidebar-header .user-info,
-.chiller-theme .sidebar-wrapper .sidebar-brand > a:hover,
-.chiller-theme .sidebar-footer > a:hover i {
+.chiller-theme .sidebar-wrapper .sidebar-brand>a:hover,
+.chiller-theme .sidebar-footer>a:hover i {
   color: #b8bfce;
 }
 
@@ -492,7 +386,7 @@ header {
 
 .chiller-theme .sidebar-wrapper ul li:hover a i,
 .chiller-theme .sidebar-wrapper .sidebar-dropdown .sidebar-submenu li a:hover:before,
-.chiller-theme .sidebar-wrapper .sidebar-search input.search-menu:focus + span,
+.chiller-theme .sidebar-wrapper .sidebar-search input.search-menu:focus+span,
 .chiller-theme .sidebar-wrapper .sidebar-menu .sidebar-dropdown.active a i {
   color: #16c7ff;
   text-shadow: 0px 0px 10px rgba(22, 199, 255, 0.5);
@@ -515,214 +409,10 @@ header {
   border-top: 1px solid #464a52;
 }
 
-.chiller-theme .sidebar-footer > a:first-child {
+.chiller-theme .sidebar-footer>a:first-child {
   border-left: none;
 }
 
-.chiller-theme .sidebar-footer > a:last-child {
+.chiller-theme .sidebar-footer>a:last-child {
   border-right: none;
 }
-
-/*TEXT FEATURES*/
-/*FONTS*/
-/*h1*/
-/*h2*/
-/*h3*/
-/*h4*/
-/*h5*/
-/*Body Background Image*/
-/*Primo Piano Background Image*/
-.nav_button {
-  background-color: #3b4833;
-  border-radius: 5px;
-  display: inline-block;
-  color: #ecefe7;
-  font-size: 15px;
-  font-weight: bold;
-  text-decoration: none;
-  transition: all 0.5s ease-in-out;
-}
-
-.nav_button.toggle-btn--dark {
-  background-color: rgb(157, 191, 227);
-  color: rgb(40, 60, 102);
-}
-
-.nav_button:hover {
-  transform: scale(1.05);
-  color: #e7f2ed;
-}
-
-.nav_button:active {
-  position: relative;
-  top: 1px;
-  color: #e7f2ed !important;
-}
-
-#toggle-btn {
-  display: inline-block;
-  width: 40px;
-  height: 40px;
-  background-color: #3b4833;
-  background-image: url("../img/dark_mode_toggle/brightness-high-fill.svg");
-  background-size: 50%;
-  background-repeat: no-repeat;
-  background-position: center;
-  border-radius: 5px;
-  position: relative;
-  left: 10px;
-  cursor: pointer;
-  border: 1px solid black;
-  transition: all 0.5s ease-in-out;
-}
-
-#toggle-btn:hover {
-  transform: scale(1.05);
-  color: #e7f2ed;
-}
-
-#toggle-btn.toggle-btn--dark {
-  background-color: rgb(157, 191, 227);
-  background-image: url("../img/dark_mode_toggle/moon-fill.svg");
-  background-size: 50%;
-  background-repeat: no-repeat;
-  background-position: center;
-  border: 1px solid white;
-}
-
-/*TEXT FEATURES*/
-/*FONTS*/
-/*h1*/
-/*h2*/
-/*h3*/
-/*h4*/
-/*h5*/
-/*Body Background Image*/
-/*Primo Piano Background Image*/
-h1 {
-  color: black;
-  font-size: 9vh;
-  font-weight: 700;
-  letter-spacing: 3.4px;
-  word-spacing: 6px;
-  text-transform: none;
-  text-shadow: -1px 0 #a6c193, 0 1px #a6c193, 1px 0 #a6c193, 0 -1px #a6c193;
-}
-
-h2 {
-  color: black;
-  font-size: 4vh;
-  font-weight: 600;
-  letter-spacing: 3.4px;
-  word-spacing: 6px;
-  text-transform: none;
-  text-shadow: -1px 0 #a6c193, 0 1px #a6c193, 1px 0 #a6c193, 0 -1px #a6c193;
-}
-
-h3 {
-  color: black;
-  font-size: 4vh;
-  font-weight: 600;
-  letter-spacing: 3.4px;
-  word-spacing: 6px;
-  text-transform: none;
-  text-shadow: -1px 0 #a6c193, 0 1px #a6c193, 1px 0 #a6c193, 0 -1px #a6c193;
-}
-
-/*TEXT FEATURES*/
-/*FONTS*/
-/*h1*/
-/*h2*/
-/*h3*/
-/*h4*/
-/*h5*/
-/*Body Background Image*/
-/*Primo Piano Background Image*/
-.my_spotlight_card {
-  height: auto;
-  min-width: 270px;
-  max-width: 500px;
-  margin: 0 auto;
-  border-radius: 20px;
-  border: solid 2px #2a3324;
-  cursor: pointer;
-  background-color: #e7f2ed;
-}
-.my_spotlight_card h5,
-.my_spotlight_card p {
-  margin: 5%;
-}
-.my_spotlight_card img {
-  border-radius: 18px 10px 18px 10px;
-  padding: 20px;
-}
-
-.my_spotlight_card_body {
-  background-color: #e7f2ed;
-  padding: 2%;
-  border-radius: 18px 18px 18px 18px;
-}
-
-/*TEXT FEATURES*/
-/*FONTS*/
-/*h1*/
-/*h2*/
-/*h3*/
-/*h4*/
-/*h5*/
-/*Body Background Image*/
-/*Primo Piano Background Image*/
-.my_carousel_card {
-  width: 40%;
-  height: auto;
-  min-width: 270px;
-  margin: 0 auto;
-  border-radius: 20px;
-  border: solid 2px #2a3324;
-  cursor: pointer;
-  background-color: rgb(157, 191, 227);
-}
-.my_carousel_card h5,
-.my_carousel_card p {
-  margin: 5%;
-}
-.my_carousel_card img {
-  border-radius: 18px 18px 18px 18px;
-  background-color: rgb(157, 191, 227);
-}
-
-.card-body {
-  background-color: #e7f2ed;
-  padding: 2%;
-  border-radius: 0 0 18px 18px;
-}
-
-/*TEXT FEATURES*/
-/*FONTS*/
-/*h1*/
-/*h2*/
-/*h3*/
-/*h4*/
-/*h5*/
-/*Body Background Image*/
-/*Primo Piano Background Image*/
-footer {
-  height: 150px;
-  background-color: #3b4833;
-  border-top: 2px solid #2a3324;
-  color: #e7f2ed;
-}
-
-@media screen and (max-width: 501px) {
-  footer {
-    height: auto;
-    width: auto;
-  }
-}
-.my_footer_text {
-  color: #e4f5d8;
-}
-
-.my_footer_text:hover {
-  color: #e7f2ed;
-}/*# sourceMappingURL=style.css.map */

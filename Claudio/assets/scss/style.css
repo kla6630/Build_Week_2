@@ -509,6 +509,11 @@ header {
   color: #282c33;
 }
 
+.chiller-theme .sidebar-wrapper .sidebar-menu ul li a #square:hover {
+  color: #16c7ff;
+  text-shadow: 0px 0px 10px rgba(22, 199, 255, 0.5);
+}
+
 .chiller-theme .sidebar-wrapper .sidebar-menu ul li a #squareGradient {
   background: rgb(208, 230, 255);
   background: linear-gradient(304deg, rgb(208, 230, 255) 0%, rgb(76, 45, 253) 75%);
@@ -608,36 +613,6 @@ header {
 /*h5*/
 /*Body Background Image*/
 /*Primo Piano Background Image*/
-h1 {
-  color: black;
-  font-size: 9vh;
-  font-weight: 700;
-  letter-spacing: 3.4px;
-  word-spacing: 6px;
-  text-transform: none;
-  text-shadow: -1px 0 #a6c193, 0 1px #a6c193, 1px 0 #a6c193, 0 -1px #a6c193;
-}
-
-h2 {
-  color: black;
-  font-size: 4vh;
-  font-weight: 600;
-  letter-spacing: 3.4px;
-  word-spacing: 6px;
-  text-transform: none;
-  text-shadow: -1px 0 #a6c193, 0 1px #a6c193, 1px 0 #a6c193, 0 -1px #a6c193;
-}
-
-h3 {
-  color: black;
-  font-size: 4vh;
-  font-weight: 600;
-  letter-spacing: 3.4px;
-  word-spacing: 6px;
-  text-transform: none;
-  text-shadow: -1px 0 #a6c193, 0 1px #a6c193, 1px 0 #a6c193, 0 -1px #a6c193;
-}
-
 /*TEXT FEATURES*/
 /*FONTS*/
 /*h1*/
@@ -692,6 +667,15 @@ h3 {
 
 .containerSymbols {
   color: #a5acb8;
+}
+
+.imgCard {
+  width: 100%;
+  border-radius: 30px;
+}
+
+.container-friends {
+  display: flex;
 }
 
 /*TEXT FEATURES*/

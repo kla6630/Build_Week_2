@@ -1,0 +1,10 @@
+@import "./variables";
+
+body {
+  background-color: $my-body-bg-color;
+  background-image: $my-body-bg-img;
+  background-attachment: fixed;
+  background-size: cover;
+  font-family: $body_font;
+  z-index: 1;
+}

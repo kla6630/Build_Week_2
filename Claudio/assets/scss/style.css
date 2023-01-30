@@ -502,7 +502,11 @@ header {
 .chiller-theme .sidebar-wrapper .sidebar-menu .sidebar-dropdown div,
 .chiller-theme .sidebar-wrapper .sidebar-search input.search-menu,
 .chiller-theme .sidebar-wrapper .sidebar-search .input-group-text {
-  background: #3a3f48;
+  background: #a5acb8;
+}
+
+.chiller-theme .sidebar-wrapper .sidebar-menu ul li a #square {
+  color: #282c33;
 }
 
 .chiller-theme .sidebar-wrapper .sidebar-menu ul li a #squareGradient {

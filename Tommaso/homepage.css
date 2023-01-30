@@ -23,5 +23,13 @@ body {
 #first-card {
   height: 30rem !important;
   padding-left: 5rem;
-  width: 20% !important;
+  width: 1rem !important;
+}
+#first-card p, #first-card a, #first-card h5 {
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+#buonasera {
+  height: 5rem !important;
 }/*# sourceMappingURL=homepage.css.map */

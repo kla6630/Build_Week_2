@@ -18,15 +18,6 @@
 /*h5*/
 /*Body Background Image*/
 /*Primo Piano Background Image*/
-body {
-  background-color: rgb(20, 20, 20);
-  background-image: none;
-  background-attachment: fixed;
-  background-size: cover;
-  font-family: "Roboto", monospace;
-  z-index: 1;
-}
-
 /*TEXT FEATURES*/
 /*FONTS*/
 /*h1*/
@@ -36,62 +27,6 @@ body {
 /*h5*/
 /*Body Background Image*/
 /*Primo Piano Background Image*/
-.dark-mode body {
-  background-color: rgb(64, 108, 156);
-  background-image: url("../img/bg/wp-dark.jpg");
-}
-.dark-mode nav {
-  background-color: #172e47;
-  border-bottom-color: rgb(78, 126, 230);
-}
-.dark-mode .my_logo,
-.dark-mode .my_nav_link {
-  color: rgb(188, 200, 228);
-}
-.dark-mode .my_nav_link:hover,
-.dark-mode .nav_social_icons:hover {
-  color: black;
-}
-.dark-mode header {
-  background-color: rgb(64, 108, 156);
-  border-bottom-color: rgb(78, 126, 230);
-}
-.dark-mode .my_spotlight_card {
-  border-color: rgb(78, 126, 230);
-  background-color: black;
-  color: white;
-}
-.dark-mode .my_spotlight_card_body {
-  background-color: black;
-  color: white;
-}
-.dark-mode .partners_logos_container {
-  border-color: rgb(78, 126, 230);
-  background-color: #172e47;
-}
-.dark-mode .my_carousel_card {
-  background-color: rgb(40, 60, 102);
-  color: white;
-  border-color: rgb(78, 126, 230);
-}
-.dark-mode .my_carousel_card img {
-  background-color: rgb(40, 60, 102);
-}
-.dark-mode .card-body {
-  background-color: black;
-}
-.dark-mode footer {
-  border-top-color: rgb(78, 126, 230);
-  color: black;
-  background-color: rgb(40, 60, 102);
-}
-.dark-mode .my_footer_text {
-  color: rgb(157, 191, 227);
-}
-.dark-mode .my_footer_text:hover {
-  color: black;
-}
-
 /*TEXT FEATURES*/
 /*FONTS*/
 /*h1*/
@@ -356,6 +291,7 @@ header {
 }
 
 /*--------------------------side-footer------------------------------*/
+/*
 .sidebar-footer {
   position: absolute;
   width: 100%;
@@ -363,7 +299,7 @@ header {
   display: flex;
 }
 
-.sidebar-footer > a {
+.sidebar-footer>a {
   flex-grow: 1;
   text-align: center;
   height: 30px;
@@ -371,7 +307,7 @@ header {
   position: relative;
 }
 
-.sidebar-footer > a .notification {
+.sidebar-footer>a .notification {
   position: absolute;
   top: 0;
 }
@@ -546,64 +482,6 @@ header {
 /*h5*/
 /*Body Background Image*/
 /*Primo Piano Background Image*/
-.nav_button {
-  background-color: #3b4833;
-  border-radius: 5px;
-  display: inline-block;
-  color: #ecefe7;
-  font-size: 15px;
-  font-weight: bold;
-  text-decoration: none;
-  transition: all 0.5s ease-in-out;
-}
-
-.nav_button.toggle-btn--dark {
-  background-color: rgb(157, 191, 227);
-  color: rgb(40, 60, 102);
-}
-
-.nav_button:hover {
-  transform: scale(1.05);
-  color: #e7f2ed;
-}
-
-.nav_button:active {
-  position: relative;
-  top: 1px;
-  color: #e7f2ed !important;
-}
-
-#toggle-btn {
-  display: inline-block;
-  width: 40px;
-  height: 40px;
-  background-color: #3b4833;
-  background-image: url("../img/dark_mode_toggle/brightness-high-fill.svg");
-  background-size: 50%;
-  background-repeat: no-repeat;
-  background-position: center;
-  border-radius: 5px;
-  position: relative;
-  left: 10px;
-  cursor: pointer;
-  border: 1px solid black;
-  transition: all 0.5s ease-in-out;
-}
-
-#toggle-btn:hover {
-  transform: scale(1.05);
-  color: #e7f2ed;
-}
-
-#toggle-btn.toggle-btn--dark {
-  background-color: rgb(157, 191, 227);
-  background-image: url("../img/dark_mode_toggle/moon-fill.svg");
-  background-size: 50%;
-  background-repeat: no-repeat;
-  background-position: center;
-  border: 1px solid white;
-}
-
 /*TEXT FEATURES*/
 /*FONTS*/
 /*h1*/
@@ -676,6 +554,16 @@ header {
 
 .container-friends {
   display: flex;
+}
+
+h2 {
+  font-size: 1em;
+  color: #a5acb8;
+}
+
+h3 {
+  font-size: 0.7em;
+  color: #a5acb8;
 }
 
 /*TEXT FEATURES*/

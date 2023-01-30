@@ -1,0 +1,379 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
+/*TEXT FEATURES*/
+/*FONTS*/
+/*h1*/
+/*h2*/
+/*h3*/
+/*h4*/
+/*h5*/
+/*Body Background Image*/
+/*Primo Piano Background Image*/
+/*TEXT FEATURES*/
+/*FONTS*/
+/*h1*/
+/*h2*/
+/*h3*/
+/*h4*/
+/*h5*/
+/*Body Background Image*/
+/*Primo Piano Background Image*/
+body {
+  background-color: rgb(20, 20, 20);
+  background-image: none;
+  background-attachment: fixed;
+  background-size: cover;
+  font-family: "Roboto", monospace;
+  z-index: 1;
+}
+
+/*TEXT FEATURES*/
+/*FONTS*/
+/*h1*/
+/*h2*/
+/*h3*/
+/*h4*/
+/*h5*/
+/*Body Background Image*/
+/*Primo Piano Background Image*/
+.dark-mode body {
+  background-color: rgb(64, 108, 156);
+  background-image: url("../img/bg/wp-dark.jpg");
+}
+.dark-mode nav {
+  background-color: #172e47;
+  border-bottom-color: rgb(78, 126, 230);
+}
+.dark-mode .my_logo,
+.dark-mode .my_nav_link {
+  color: rgb(188, 200, 228);
+}
+.dark-mode .my_nav_link:hover,
+.dark-mode .nav_social_icons:hover {
+  color: black;
+}
+.dark-mode header {
+  background-color: rgb(64, 108, 156);
+  border-bottom-color: rgb(78, 126, 230);
+}
+.dark-mode .my_spotlight_card {
+  border-color: rgb(78, 126, 230);
+  background-color: black;
+  color: white;
+}
+.dark-mode .my_spotlight_card_body {
+  background-color: black;
+  color: white;
+}
+.dark-mode .partners_logos_container {
+  border-color: rgb(78, 126, 230);
+  background-color: #172e47;
+}
+.dark-mode .my_carousel_card {
+  background-color: rgb(40, 60, 102);
+  color: white;
+  border-color: rgb(78, 126, 230);
+}
+.dark-mode .my_carousel_card img {
+  background-color: rgb(40, 60, 102);
+}
+.dark-mode .card-body {
+  background-color: black;
+}
+.dark-mode footer {
+  border-top-color: rgb(78, 126, 230);
+  color: black;
+  background-color: rgb(40, 60, 102);
+}
+.dark-mode .my_footer_text {
+  color: rgb(157, 191, 227);
+}
+.dark-mode .my_footer_text:hover {
+  color: black;
+}
+
+/*TEXT FEATURES*/
+/*FONTS*/
+/*h1*/
+/*h2*/
+/*h3*/
+/*h4*/
+/*h5*/
+/*Body Background Image*/
+/*Primo Piano Background Image*/
+header {
+  background-color: #e4f5d8;
+  min-height: 300px;
+  background-image: url("../img/astro_programmer.png");
+  background-repeat: no-repeat;
+  background-size: 500px auto;
+  background-position: center;
+  padding-top: 15%;
+  border-bottom: solid 1px #2a3324;
+}
+
+@media screen and (max-width: 992px) {
+  header {
+    background-image: none;
+  }
+}
+/*TEXT FEATURES*/
+/*FONTS*/
+/*h1*/
+/*h2*/
+/*h3*/
+/*h4*/
+/*h5*/
+/*Body Background Image*/
+/*Primo Piano Background Image*/
+nav {
+  background-color: #bdeb9e;
+  display: block;
+  border-bottom: solid 2px #2a3324;
+}
+nav ul {
+  padding: 0;
+  list-style-type: none;
+  font-size: 1.2em;
+  display: flex;
+}
+nav ul li {
+  margin-right: 10px;
+}
+
+.my_logo {
+  width: 50px;
+  height: auto;
+  color: #3b4833 !important;
+}
+
+.my_nav_link {
+  color: #3b4833 !important;
+}
+
+.my_nav_link:hover {
+  color: #6a934c !important;
+}
+
+.nav_social_icons {
+  margin-left: 4%;
+  color: #3b4833 !important;
+}
+
+.nav_social_icons:hover {
+  color: #6a934c !important;
+  scale: 120%;
+}
+
+@media screen and (max-width: 992px) {
+  .nav_social_icons:hover {
+    scale: 100%;
+  }
+}
+.bi-list {
+  font-size: 30px;
+}
+
+/*TEXT FEATURES*/
+/*FONTS*/
+/*h1*/
+/*h2*/
+/*h3*/
+/*h4*/
+/*h5*/
+/*Body Background Image*/
+/*Primo Piano Background Image*/
+.nav_button {
+  background-color: #3b4833;
+  border-radius: 5px;
+  display: inline-block;
+  color: #ecefe7;
+  font-size: 15px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: all 0.5s ease-in-out;
+}
+
+.nav_button.toggle-btn--dark {
+  background-color: rgb(157, 191, 227);
+  color: rgb(40, 60, 102);
+}
+
+.nav_button:hover {
+  transform: scale(1.05);
+  color: #e7f2ed;
+}
+
+.nav_button:active {
+  position: relative;
+  top: 1px;
+  color: #e7f2ed !important;
+}
+
+#toggle-btn {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background-color: #3b4833;
+  background-image: url("../img/dark_mode_toggle/brightness-high-fill.svg");
+  background-size: 50%;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 5px;
+  position: relative;
+  left: 10px;
+  cursor: pointer;
+  border: 1px solid black;
+  transition: all 0.5s ease-in-out;
+}
+
+#toggle-btn:hover {
+  transform: scale(1.05);
+  color: #e7f2ed;
+}
+
+#toggle-btn.toggle-btn--dark {
+  background-color: rgb(157, 191, 227);
+  background-image: url("../img/dark_mode_toggle/moon-fill.svg");
+  background-size: 50%;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: 1px solid white;
+}
+
+/*TEXT FEATURES*/
+/*FONTS*/
+/*h1*/
+/*h2*/
+/*h3*/
+/*h4*/
+/*h5*/
+/*Body Background Image*/
+/*Primo Piano Background Image*/
+h1 {
+  color: black;
+  font-size: 9vh;
+  font-weight: 700;
+  letter-spacing: 3.4px;
+  word-spacing: 6px;
+  text-transform: none;
+  text-shadow: -1px 0 #a6c193, 0 1px #a6c193, 1px 0 #a6c193, 0 -1px #a6c193;
+}
+
+h2 {
+  color: black;
+  font-size: 4vh;
+  font-weight: 600;
+  letter-spacing: 3.4px;
+  word-spacing: 6px;
+  text-transform: none;
+  text-shadow: -1px 0 #a6c193, 0 1px #a6c193, 1px 0 #a6c193, 0 -1px #a6c193;
+}
+
+h3 {
+  color: black;
+  font-size: 4vh;
+  font-weight: 600;
+  letter-spacing: 3.4px;
+  word-spacing: 6px;
+  text-transform: none;
+  text-shadow: -1px 0 #a6c193, 0 1px #a6c193, 1px 0 #a6c193, 0 -1px #a6c193;
+}
+
+/*TEXT FEATURES*/
+/*FONTS*/
+/*h1*/
+/*h2*/
+/*h3*/
+/*h4*/
+/*h5*/
+/*Body Background Image*/
+/*Primo Piano Background Image*/
+.my_spotlight_card {
+  height: auto;
+  min-width: 270px;
+  max-width: 500px;
+  margin: 0 auto;
+  border-radius: 20px;
+  border: solid 2px #2a3324;
+  cursor: pointer;
+  background-color: #e7f2ed;
+}
+.my_spotlight_card h5,
+.my_spotlight_card p {
+  margin: 5%;
+}
+.my_spotlight_card img {
+  border-radius: 18px 10px 18px 10px;
+  padding: 20px;
+}
+
+.my_spotlight_card_body {
+  background-color: #e7f2ed;
+  padding: 2%;
+  border-radius: 18px 18px 18px 18px;
+}
+
+/*TEXT FEATURES*/
+/*FONTS*/
+/*h1*/
+/*h2*/
+/*h3*/
+/*h4*/
+/*h5*/
+/*Body Background Image*/
+/*Primo Piano Background Image*/
+.my_carousel_card {
+  width: 40%;
+  height: auto;
+  min-width: 270px;
+  margin: 0 auto;
+  border-radius: 20px;
+  border: solid 2px #2a3324;
+  cursor: pointer;
+  background-color: rgb(157, 191, 227);
+}
+.my_carousel_card h5,
+.my_carousel_card p {
+  margin: 5%;
+}
+.my_carousel_card img {
+  border-radius: 18px 18px 18px 18px;
+  background-color: rgb(157, 191, 227);
+}
+
+.card-body {
+  background-color: #e7f2ed;
+  padding: 2%;
+  border-radius: 0 0 18px 18px;
+}
+
+/*TEXT FEATURES*/
+/*FONTS*/
+/*h1*/
+/*h2*/
+/*h3*/
+/*h4*/
+/*h5*/
+/*Body Background Image*/
+/*Primo Piano Background Image*/
+footer {
+  height: 150px;
+  background-color: #3b4833;
+  border-top: 2px solid #2a3324;
+  color: #e7f2ed;
+}
+
+@media screen and (max-width: 501px) {
+  footer {
+    height: auto;
+    width: auto;
+  }
+}
+.my_footer_text {
+  color: #e4f5d8;
+}
+
+.my_footer_text:hover {
+  color: #e7f2ed;
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,62 @@
+@import "./variables";
+
+.dark-mode {
+  body {
+    background-color: $dark-my-body-bg-color;
+    background-image: $dark-my-body-bg-img;
+  }
+
+  nav {
+    background-color: $dark-my-nav-bg-color;
+    border-bottom-color: $dark-my-border-bottom-color;
+  }
+  .my_logo,
+  .my_nav_link {
+    color: $dark-my-nav-icons-text-color;
+  }
+  .my_nav_link:hover,
+  .nav_social_icons:hover {
+    color: $dark-my-brightest-one;
+  }
+  header {
+    background-color: $dark-my-header-bg-color;
+    border-bottom-color: $dark-my-border-bottom-color;
+  }
+  .my_spotlight_card {
+    border-color: $dark-my-border-bottom-color;
+    background-color: $dark-my-brightest-one;
+    color: $dark-my-darkest-one;
+  }
+
+  .my_spotlight_card_body {
+    background-color: $dark-my-brightest-one;
+    color: $dark-my-darkest-one;
+  }
+  .partners_logos_container {
+    border-color: $dark-my-border-bottom-color;
+    background-color: $dark-my-partners-logos-bg-color;
+  }
+  .my_carousel_card {
+    background-color: $dark-my-carousel-card-photo-bg-color;
+    color: $dark-my-darkest-one;
+    border-color: $dark-my-border-bottom-color;
+
+    img {
+      background-color: $dark-my-carousel-card-photo-bg-color;
+    }
+  }
+  .card-body {
+    background-color: $dark-my-brightest-one;
+  }
+  footer {
+    border-top-color: $dark-my-border-bottom-color;
+    color: $dark-my-brightest-one;
+    background-color: $dark-my-footer-bg-color;
+  }
+  .my_footer_text {
+    color: $dark-my-footer-text-color;
+  }
+  .my_footer_text:hover {
+    color: $dark-my-brightest-one;
+  }
+}

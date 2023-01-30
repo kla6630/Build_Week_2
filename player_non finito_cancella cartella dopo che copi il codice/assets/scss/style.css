@@ -18,6 +18,15 @@
 /*h5*/
 /*Body Background Image*/
 /*Primo Piano Background Image*/
+body {
+  background-color: rgb(20, 20, 20);
+  background-image: none;
+  background-attachment: fixed;
+  background-size: cover;
+  font-family: "Roboto", monospace;
+  z-index: 1;
+}
+
 /*TEXT FEATURES*/
 /*FONTS*/
 /*h1*/
@@ -27,6 +36,62 @@
 /*h5*/
 /*Body Background Image*/
 /*Primo Piano Background Image*/
+.dark-mode body {
+  background-color: rgb(64, 108, 156);
+  background-image: url("../img/bg/wp-dark.jpg");
+}
+.dark-mode nav {
+  background-color: #172e47;
+  border-bottom-color: rgb(78, 126, 230);
+}
+.dark-mode .my_logo,
+.dark-mode .my_nav_link {
+  color: rgb(188, 200, 228);
+}
+.dark-mode .my_nav_link:hover,
+.dark-mode .nav_social_icons:hover {
+  color: black;
+}
+.dark-mode header {
+  background-color: rgb(64, 108, 156);
+  border-bottom-color: rgb(78, 126, 230);
+}
+.dark-mode .my_spotlight_card {
+  border-color: rgb(78, 126, 230);
+  background-color: black;
+  color: white;
+}
+.dark-mode .my_spotlight_card_body {
+  background-color: black;
+  color: white;
+}
+.dark-mode .partners_logos_container {
+  border-color: rgb(78, 126, 230);
+  background-color: #172e47;
+}
+.dark-mode .my_carousel_card {
+  background-color: rgb(40, 60, 102);
+  color: white;
+  border-color: rgb(78, 126, 230);
+}
+.dark-mode .my_carousel_card img {
+  background-color: rgb(40, 60, 102);
+}
+.dark-mode .card-body {
+  background-color: black;
+}
+.dark-mode footer {
+  border-top-color: rgb(78, 126, 230);
+  color: black;
+  background-color: rgb(40, 60, 102);
+}
+.dark-mode .my_footer_text {
+  color: rgb(157, 191, 227);
+}
+.dark-mode .my_footer_text:hover {
+  color: black;
+}
+
 /*TEXT FEATURES*/
 /*FONTS*/
 /*h1*/
@@ -291,7 +356,6 @@ header {
 }
 
 /*--------------------------side-footer------------------------------*/
-/*
 .sidebar-footer {
   position: absolute;
   width: 100%;
@@ -299,7 +363,7 @@ header {
   display: flex;
 }
 
-.sidebar-footer>a {
+.sidebar-footer > a {
   flex-grow: 1;
   text-align: center;
   height: 30px;
@@ -307,7 +371,7 @@ header {
   position: relative;
 }
 
-.sidebar-footer>a .notification {
+.sidebar-footer > a .notification {
   position: absolute;
   top: 0;
 }
@@ -407,7 +471,7 @@ header {
 .chiller-theme .sidebar-wrapper .sidebar-brand > a,
 .chiller-theme .sidebar-wrapper .sidebar-menu ul li a,
 .chiller-theme .sidebar-footer > a {
-  color: #b8bfce;
+  color: #818896;
 }
 
 .chiller-theme .sidebar-wrapper .sidebar-menu ul li:hover > a,
@@ -415,7 +479,7 @@ header {
 .chiller-theme .sidebar-wrapper .sidebar-header .user-info,
 .chiller-theme .sidebar-wrapper .sidebar-brand > a:hover,
 .chiller-theme .sidebar-footer > a:hover i {
-  color: #fdfdfd;
+  color: #b8bfce;
 }
 
 .page-wrapper.chiller-theme.toggled #close-sidebar {
@@ -434,25 +498,11 @@ header {
   text-shadow: 0px 0px 10px rgba(22, 199, 255, 0.5);
 }
 
-.chiller-theme .sidebar-wrapper .sidebar-menu ul li a #square,
+.chiller-theme .sidebar-wrapper .sidebar-menu ul li a i,
 .chiller-theme .sidebar-wrapper .sidebar-menu .sidebar-dropdown div,
 .chiller-theme .sidebar-wrapper .sidebar-search input.search-menu,
 .chiller-theme .sidebar-wrapper .sidebar-search .input-group-text {
-  background: #a5acb8;
-}
-
-.chiller-theme .sidebar-wrapper .sidebar-menu ul li a #square {
-  color: #282c33;
-}
-
-.chiller-theme .sidebar-wrapper .sidebar-menu ul li a #square:hover {
-  color: #16c7ff;
-  text-shadow: 0px 0px 10px rgba(22, 199, 255, 0.5);
-}
-
-.chiller-theme .sidebar-wrapper .sidebar-menu ul li a #squareGradient {
-  background: rgb(208, 230, 255);
-  background: linear-gradient(304deg, rgb(208, 230, 255) 0%, rgb(76, 45, 253) 75%);
+  background: #3a3f48;
 }
 
 .chiller-theme .sidebar-wrapper .sidebar-menu .header-menu span {
@@ -482,6 +532,64 @@ header {
 /*h5*/
 /*Body Background Image*/
 /*Primo Piano Background Image*/
+.nav_button {
+  background-color: #3b4833;
+  border-radius: 5px;
+  display: inline-block;
+  color: #ecefe7;
+  font-size: 15px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: all 0.5s ease-in-out;
+}
+
+.nav_button.toggle-btn--dark {
+  background-color: rgb(157, 191, 227);
+  color: rgb(40, 60, 102);
+}
+
+.nav_button:hover {
+  transform: scale(1.05);
+  color: #e7f2ed;
+}
+
+.nav_button:active {
+  position: relative;
+  top: 1px;
+  color: #e7f2ed !important;
+}
+
+#toggle-btn {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background-color: #3b4833;
+  background-image: url("../img/dark_mode_toggle/brightness-high-fill.svg");
+  background-size: 50%;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 5px;
+  position: relative;
+  left: 10px;
+  cursor: pointer;
+  border: 1px solid black;
+  transition: all 0.5s ease-in-out;
+}
+
+#toggle-btn:hover {
+  transform: scale(1.05);
+  color: #e7f2ed;
+}
+
+#toggle-btn.toggle-btn--dark {
+  background-color: rgb(157, 191, 227);
+  background-image: url("../img/dark_mode_toggle/moon-fill.svg");
+  background-size: 50%;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: 1px solid white;
+}
+
 /*TEXT FEATURES*/
 /*FONTS*/
 /*h1*/
@@ -491,6 +599,36 @@ header {
 /*h5*/
 /*Body Background Image*/
 /*Primo Piano Background Image*/
+h1 {
+  color: black;
+  font-size: 9vh;
+  font-weight: 700;
+  letter-spacing: 3.4px;
+  word-spacing: 6px;
+  text-transform: none;
+  text-shadow: -1px 0 #a6c193, 0 1px #a6c193, 1px 0 #a6c193, 0 -1px #a6c193;
+}
+
+h2 {
+  color: black;
+  font-size: 4vh;
+  font-weight: 600;
+  letter-spacing: 3.4px;
+  word-spacing: 6px;
+  text-transform: none;
+  text-shadow: -1px 0 #a6c193, 0 1px #a6c193, 1px 0 #a6c193, 0 -1px #a6c193;
+}
+
+h3 {
+  color: black;
+  font-size: 4vh;
+  font-weight: 600;
+  letter-spacing: 3.4px;
+  word-spacing: 6px;
+  text-transform: none;
+  text-shadow: -1px 0 #a6c193, 0 1px #a6c193, 1px 0 #a6c193, 0 -1px #a6c193;
+}
+
 /*TEXT FEATURES*/
 /*FONTS*/
 /*h1*/
@@ -534,36 +672,29 @@ header {
 /*h5*/
 /*Body Background Image*/
 /*Primo Piano Background Image*/
-.amici {
-  font-weight: bold;
-  color: #a5acb8;
+.my_carousel_card {
+  width: 40%;
+  height: auto;
+  min-width: 270px;
+  margin: 0 auto;
+  border-radius: 20px;
+  border: solid 2px #2a3324;
+  cursor: pointer;
+  background-color: rgb(157, 191, 227);
+}
+.my_carousel_card h5,
+.my_carousel_card p {
+  margin: 5%;
+}
+.my_carousel_card img {
+  border-radius: 18px 18px 18px 18px;
+  background-color: rgb(157, 191, 227);
 }
 
-.amici:hover {
-  color: #fdfdfd;
-}
-
-.containerSymbols {
-  color: #a5acb8;
-}
-
-.imgCard {
-  width: 100%;
-  border-radius: 30px;
-}
-
-.container-friends {
-  display: flex;
-}
-
-h2 {
-  font-size: 1em;
-  color: #a5acb8;
-}
-
-h3 {
-  font-size: 0.7em;
-  color: #a5acb8;
+.card-body {
+  background-color: #e7f2ed;
+  padding: 2%;
+  border-radius: 0 0 18px 18px;
 }
 
 /*TEXT FEATURES*/
@@ -575,172 +706,27 @@ h3 {
 /*h5*/
 /*Body Background Image*/
 /*Primo Piano Background Image*/
-.container {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  display: flex;
+footer {
+  height: auto;
+  background-color: #3b4833;
+  border-top: 2px solid #2a3324;
+  color: #e7f2ed;
 }
 
-.container aside {
-  width: 20%;
-  height: 100vh;
-  background-color: #000000;
-  padding: var(--padding);
+@media screen and (max-width: 501px) {
+  footer {
+    height: auto;
+    width: auto;
+  }
+}
+.my_footer_text {
+  color: #e4f5d8;
 }
 
-.container aside .menu {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
+.my_footer_text:hover {
+  color: #e7f2ed;
 }
 
-.container aside .menu a {
-  text-decoration: none;
-  padding: 10px 1rem;
-  color: #c5c5c5;
-  font-weight: bold;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-}
-
-.container aside .menu a span {
-  margin-right: 8px;
-}
-
-.container aside .menu a.active {
-  background-color: #282828;
-  border-radius: 5px;
-  color: #ffffff;
-}
-
-.container aside .menu a:hover {
-  color: #ffffff;
-}
-
-.container section {
-  width: 80%;
-  height: 100vh;
-  color: #ffffff;
-  background-color: var(--fondo);
-  overflow-y: scroll;
-  padding-bottom: 5rem;
-}
-
-.container section::-webkit-scrollbar {
-  -webkit-appearance: none;
-}
-
-.container section::-webkit-scrollbar:vertical {
-  width: 7px;
-}
-
-.container section::-webkit-scrollbar-thumb {
-  background-color: #797979;
-}
-
-.container section header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: fixed;
-  padding: var(--padding);
-  width: 80%;
-  background-color: #505053;
-  z-index: 2;
-}
-
-.container section header .botones_prev_next, .container section header .suscribcion {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.container section header .botones_prev_next span {
-  cursor: pointer;
-}
-
-.container section header .botones_prev_next span.btn_prev {
-  margin-right: 1em;
-}
-
-.container section header .suscribcion .mejora_cuenta {
-  margin-right: 1.5em;
-}
-
-.container section header .suscribcion .mejora_cuenta button {
-  background-color: #000000;
-  border: 1px solid #ffffff;
-  width: 250px;
-  padding: 0.8em 0;
-  color: #ffffff;
-  border-radius: 30px;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  font-weight: bold;
-  cursor: pointer;
-  transition: all 0.2s;
-}
-
-.container section header .suscribcion .mejora_cuenta button:hover {
-  transform: scale(1.1);
-}
-
-.container section header .suscribcion .perfil {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  background-color: #000000;
-  width: auto;
-  padding: 0.4em 5px;
-  border-radius: 30px;
-  cursor: pointer;
-  z-index: 2;
-}
-
-.container section header .suscribcion .perfil .circulo {
-  background-color: #333333;
-  border-radius: 50%;
-  width: 28px;
-  height: 28px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.container footer {
-  background: var(--fondo);
-  display: flex;
-  flex-direction: column;
-  position: fixed;
-  width: 100%;
-  bottom: 0;
-  padding: var(--padding);
-  border-top: 1px solid #282828;
-  color: #ffffff;
-}
-
-.container footer .controles {
-  display: flex;
-  align-items: center;
-  margin: auto;
-  padding-bottom: 0.5em;
-}
-
-.container footer .controles img {
-  margin: 0 0.5em;
-}
-
-.container footer .progreso {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.container footer .progreso .barra_progreso {
-  width: 40%;
-  height: 5px;
-  background-color: #282828;
-  border-radius: var(--radius);
-  margin: 0 1em;
+* {
+  box-sizing: border-box;
 }/*# sourceMappingURL=style.css.map */

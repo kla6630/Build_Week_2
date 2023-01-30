@@ -1,0 +1,37 @@
+@import "./variables";
+
+h1 {
+  color: $h1_color_personal;
+  font-size: $h1_font_size_personal;
+  font-weight: $h1_font-weight_personal;
+  letter-spacing: $h1_letter-spacing_personal;
+  word-spacing: $h1_word-spacing_personal;
+  text-transform: $h1_text-transform_personal;
+  text-shadow: $h1_text-shadow_personal;
+}
+
+h2 {
+  color: $h2_color_personal;
+  font-size: $h2_font_size_personal;
+  font-weight: $h2_font-weight_personal;
+  letter-spacing: $h2_letter-spacing_personal;
+  word-spacing: $h2_word-spacing_personal;
+  text-transform: $h2_text-transform_personal;
+  text-shadow: $h2_text-shadow_personal;
+}
+
+h3 {
+  color: $h3_color_personal;
+  font-size: $h3_font_size_personal;
+  font-weight: $h3_font-weight_personal;
+  letter-spacing: $h3_letter-spacing_personal;
+  word-spacing: $h3_word-spacing_personal;
+  text-transform: $h3_text-transform_personal;
+  text-shadow: $h3_text-shadow_personal;
+}
+
+h4 {
+}
+
+h5 {
+}

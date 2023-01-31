@@ -21,42 +21,7 @@ body,
   left: 0;
 }
 
-a {
-    color: white;
-    text-decoration: none;
-}
-
-#impostazioni{
-    border-bottom: 1px solid lightgray;
-}
-
-#bg-secondar, #btn-secondar{
-    background-color: $special-gray !important;
-
-}
-
-
-#menu{
-    
-    background-color: $special-gray ;
-    border-color: $special-gray2 ;
-    color: lightgray ;
-}
 
 
 
-#first-card{
-    height: 30rem !important;
-    padding-left: 5rem;
-    width: 1rem !important;
-    p, a, h5 {
-        object-fit: contain;
-    }
-}
-
-
-
-#buonasera{
-    height: 5rem !important;
-}
 

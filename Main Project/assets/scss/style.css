@@ -510,8 +510,15 @@ h3 {
 footer {
   position: fixed;
   bottom: 0;
+  right: 0;
+  left: 0;
   max-width: 100%;
   width: 100%;
+}
+
+.col-bg {
+  background-color: #181818;
+  border-top: 1px solid black;
 }
 
 .player-buttons a {

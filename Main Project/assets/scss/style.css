@@ -511,17 +511,59 @@ h3 {
   color: #a5acb8;
 }
 
+footer {
+  position: fixed;
+  bottom: 0;
+  max-width: 100%;
+  width: 100%;
+}
+
 .player-buttons a {
   padding: 15px;
   scale: 150%;
+  color: #bababa;
+}
+
+.player-buttons a:hover {
+  color: white;
 }
 
 .player-button-play {
-  scale: 150%;
-  background-color: none;
-  color: none;
+  width: 200px;
+  color: white;
 }
 
 .player-button-play a:hover {
-  scale: 160% !important;
+  scale: 160%;
+}
+
+.player-progress-bar {
+  display: flex;
+  color: grey;
+  height: 5px;
+  position: relative;
+  top: 10px;
+  padding: 1px;
+  cursor: pointer;
+}
+
+.player-buttons-right a {
+  padding: 10px;
+  scale: 110%;
+  color: #bababa;
+}
+
+.player-buttons-right a:hover {
+  color: white;
+}
+
+.player-volume-bar {
+  display: flex;
+  color: grey;
+  height: 5px;
+  width: 40px;
+  position: relative;
+  top: 10px;
+  padding: 1px;
+  cursor: pointer;
 }/*# sourceMappingURL=style.css.map */

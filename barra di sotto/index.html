@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://use.fontawesome.com/releases/v5.0.6/css/all.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./assets/scss/style.css" />
+
+    <title>Spotify Clone</title>
+  </head>
+
+  <body>
+    <!-- INIZIO player -->
+
+    <div class="col">
+      <div class="row flex-nowrap">
+        <div class="col-3 text-bg-dark d-flex align-items-center">
+          <a href="#"><img src="http://placekitten.com/70/70" /></a>
+          <div>
+            <p>song title</p>
+            <p>artist</p>
+          </div>
+          <div>button heart img</div>
+        </div>
+
+        <div
+          class="col text-bg-dark d-flex flex-wrap flex-column justify-content-between align-items-center"
+        >
+          <div class="player-buttons d-flex">
+            <a href="#"><i class="bi bi-shuffle"></i> </a>
+            <a href="#"><i class="bi bi-skip-start-fill"></i> </a>
+            <a href="#"
+              ><i class="player-button-play bi bi-play-circle-fill"></i>
+            </a>
+            <a href="#"><i class="bi bi-skip-end-fill"></i> </a>
+            <a href="#"><i class="bi bi-repeat"></i> </a>
+          </div>
+
+          <div class="player-timeline d-flex">
+            <p>0:00</p>
+            <a href="#"><img src="http://placekitten.com/500/10" /></a>
+            <p>3:00</p>
+          </div>
+        </div>
+        <div class="col-3 text-bg-dark d-flex align-items-center">
+          <a href="#"><img src="http://placekitten.com/70/70" /></a>
+          <div>
+            <p>song title</p>
+            <p>artist</p>
+          </div>
+          <p>heart image</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- FINE Player -->
+  </body>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"
+  ></script>
+  <!-- <script src="./assets/js/dark_mode.js"></script> -->
+  <script src="./assets/js/script.js"></script>
+</html>

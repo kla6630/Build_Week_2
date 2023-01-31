@@ -1,51 +1,44 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
-
 $special-gray: rgb(15, 14, 14) !important;
 $special-gray2: rgb(82, 82, 82) !important;
 
-body{
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif, monospace;
-    color: #b8bfce;
-    background-color: $special-gray;
-    
+body {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif,
+    monospace;
+  color: #b8bfce;
+  background-color: $special-gray;
 }
-  
+
 a {
-    color: white;
-    text-decoration: none;
+  color: white;
+  text-decoration: none;
 }
 
-#impostazioni{
-    border-bottom: 1px solid lightgray;
+#impostazioni {
+  border-bottom: 1px solid lightgray;
 }
 
-#bg-secondar, #btn-secondar{
-    background-color: $special-gray !important;
-
+#bg-secondar,
+#btn-secondar {
+  background-color: $special-gray !important;
 }
 
-
-#menu{
-    
-    background-color: $special-gray ;
-    border-color: $special-gray2 ;
-    color: lightgray ;
+#menu {
+  background-color: $special-gray;
+  border-color: $special-gray2;
+  color: lightgray;
 }
 
-
-
-#first-card{
-    height: 30rem !important;
-    padding-left: 5rem;
-    width: 1rem !important;
-    p, a, h5 {
-        object-fit: contain;
-    }
+#first-card {
+  height: 30rem !important;
+  padding-left: 5rem;
+  width: 1rem !important;
+  p,
+  a,
+  h5 {
+    object-fit: contain;
+  }
 }
 
-
-
-#buonasera{
-    height: 5rem !important;
+#buonasera {
+  height: 5rem !important;
 }
-

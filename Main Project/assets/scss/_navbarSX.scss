@@ -26,20 +26,6 @@
   }
 }
 
-/*----------------show sidebar button----------------*/
-#show-sidebar {
-  position: fixed;
-  left: 0;
-  top: 10px;
-  border-radius: 0 4px 4px 0px;
-  width: 35px;
-  transition-delay: 0.3s;
-}
-
-.page-wrapper.toggled #show-sidebar {
-  left: -40px;
-}
-
 /*----------------sidebar-wrapper----------------*/
 
 .sidebar-wrapper {

@@ -949,12 +949,20 @@
       <div class="col">
         <div class="row flex-nowrap">
           <div class="col col-bg d-flex align-items-center">
-            <a href="#"> <img src="http://placekitten.com/70/70" /></a>
-            <div>
-              <p>song title</p>
-              <p>artist</p>
+            <a href="#"
+              ><img src="http://placekitten.com/70/70" id="player_left_img"
+            /></a>
+            <div id="player_left_text">
+              <ul>
+                <li id="player_left_text_li">
+                  <a href="#"><h5>song title</h5></a>
+                </li>
+                <li id="player_left_text_li">
+                  <a href="#"><h6>artist</h6></a>
+                </li>
+              </ul>
             </div>
-            <div><i class="bi bi-heart-fill"></i></div>
+            <div id="player_left_icon"><i class="bi bi-heart-fill"></i></div>
           </div>
 
           <div
@@ -983,7 +991,7 @@
               <span>3:00</span>
             </div>
           </div>
-          <div class="col col-bg d-flex align-items-center">
+          <div class="col col-bg" id="player_right_items">
             <div class="player-buttons-right d-flex">
               <a href="#"><i class="bi bi-mic-fill"></i></a>
               <a href="#"><i class="bi bi-card-list"></i></a>

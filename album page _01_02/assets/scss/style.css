@@ -1,14 +1,5 @@
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
-/*TEXT FEATURES*/
-/*FONTS*/
-/*h1*/
-/*h2*/
-/*h3*/
-/*h4*/
-/*h5*/
-/*Body Background Image*/
-/*Primo Piano Background Image*/
 body {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif, monospace;
   color: #b8bfce;
@@ -459,15 +450,6 @@ a {
   border-right: none;
 }
 
-/*TEXT FEATURES*/
-/*FONTS*/
-/*h1*/
-/*h2*/
-/*h3*/
-/*h4*/
-/*h5*/
-/*Body Background Image*/
-/*Primo Piano Background Image*/
 #SidebarDX {
   position: fixed;
   height: 100%;
@@ -630,41 +612,8 @@ footer {
   padding-right: 40px;
 }
 
-#artist_page_play_button {
-  background-color: #1ed760;
-  padding: 10px 30px 10px 30px;
-  border-radius: 30px;
-}
-
-#artist_page_play_button:hover {
-  background-color: #1fdf64;
-  scale: 105%;
-}
-
-#artist_page_save_button {
-  background-color: #000000;
-  color: white;
-  border: 1px solid white;
-  padding: 10px 30px 10px 30px;
-  border-radius: 30px;
-}
-
-#artist_page_save_button:hover {
-  scale: 105%;
-}
-
-#artist_page_3points_button {
-  background-color: rgba(255, 255, 255, 0);
-  color: grey;
-  padding: 10px 30px 10px 30px;
-  border: none;
-  font-size: 25px;
-  letter-spacing: 4px;
-}
-
-#artist_page_3points_button:hover {
-  color: white;
-  scale: 105%;
+#container_nav_header {
+  background-color: rgba(255, 0, 255, 0.459);
 }
 
 .nav-item a {
@@ -700,72 +649,140 @@ nav span {
 }
 
 .album_pg_header {
-  background-color: rgba(0, 0, 0, 0.29);
+  display: flex;
+  padding: 30px;
+  text-transform: capitalize;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: flex-end;
 }
 
-.album_page_head_text {
+#album_pg_header_img {
+  width: 250px;
+  height: 250px;
+  box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.4666666667);
+}
+
+.album_page_header_text_box {
   color: white;
   padding: 30px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  top: 50px;
 }
 
-.album_page_head_text h1 {
-  font-size: 72px;
-  text-transform: capitalize;
-}
-
-.album_page_head_text h5 {
-  font-size: 18px;
-}
-
-.album_page_head_text h6 {
-  font-size: 16px;
+#album_page_header_album_word {
+  font-size: 10pt;
   text-transform: uppercase;
 }
 
-#buonasera_section {
-  color: white;
+#album_page_header_song_title {
+  font-size: 60pt;
 }
 
-#buonasera_section h3 {
-  color: white;
-  font-size: 24px;
-}
-
-#buonasera_card {
-  background-color: #2d2d2d;
-  border-radius: 5px;
-  max-width: 350px;
-  margin: 5px;
+#album_page_header_last_row {
+  list-style-type: none;
   display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  align-items: baseline;
-  justify-content: flex-start;
-  cursor: pointer;
-  text-transform: capitalize;
-}
-
-#buonasera_card img {
-  width: 90px;
-  height: 90px;
   position: relative;
-  right: 12px;
-  border-top-left-radius: 5px;
-  border-bottom-left-radius: 5px;
+  flex-wrap: nowrap;
+  right: 30px;
+  margin-top: 20px;
+  flex-direction: row;
+  align-items: center;
 }
 
-#buonasera_card:hover {
-  background-color: #414141;
-  border-radius: 5px;
-  max-width: 350px;
-  margin: 5px;
+#album_page_header_last_row img {
+  height: 25px;
+  width: 25px;
+  border-radius: 100%;
+  position: relative;
+  bottom: 6px;
+}
+
+#album_page_header_song_author {
+  padding-left: 3px;
+  padding-right: 3px;
+  font-size: 12pt;
+  font-weight: bold;
+}
+
+#album_page_header_song_year {
+  padding-left: 3px;
+  padding-right: 3px;
+  font-weight: lighter;
+  font-size: 12pt;
+}
+
+#album_page_header_song_number_of_tracks {
+  padding-left: 3px;
+  padding-right: 3px;
+  font-weight: lighter;
+  font-size: 12pt;
+}
+
+#album_page_header_song_album_length {
+  padding-left: 3px;
+  padding-right: 3px;
+  font-weight: lighter;
+  font-size: 12pt;
+  color: rgba(255, 255, 255, 0.504);
+}
+
+#album_page_middle_buttons {
+  list-style-type: none;
   display: flex;
+  padding: 30px;
   flex-direction: row;
   flex-wrap: nowrap;
-  align-items: baseline;
+  align-items: center;
   justify-content: flex-start;
-  cursor: pointer;
-  transition: all 0.5s ease;
+}
+
+#album_page_play_button {
+  background-color: #1ed760;
+  border-radius: 50%;
+  scale: 160%;
+  margin-right: 20px;
+}
+
+#album_page_play_button:hover {
+  scale: 170%;
+}
+
+#album_page_heart_button {
+  background-color: rgba(45, 45, 45, 0);
+  color: #b7bbc0;
+  border: none;
+  scale: 160%;
+  margin-right: 20px;
+}
+
+#album_page_heart_button:hover {
+  color: white;
+}
+
+#album_page_download_button {
+  background-color: rgba(45, 45, 45, 0);
+  color: #b7bbc0;
+  border: none;
+  scale: 160%;
+  margin-right: 20px;
+}
+
+#album_page_download_button:hover {
+  color: white;
+}
+
+#album_page_3points_button {
+  background-color: rgba(45, 45, 45, 0);
+  color: #b7bbc0;
+  border: none;
+  scale: 160%;
+}
+
+#album_page_3points_button:hover {
+  color: white;
 }
 
 #altro_section h3 {

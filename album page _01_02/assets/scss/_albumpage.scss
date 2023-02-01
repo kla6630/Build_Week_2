@@ -1,0 +1,220 @@
+//ALBUM PAGE NAV+HEADER//
+
+#container_nav_header {
+  background-color: rgba(255, 0, 255, 0.459);
+}
+
+//ALBUM PAGE NAV//
+.nav-item a {
+  color: "white";
+}
+
+.nav-link img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+nav span {
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+#album_page_pill {
+  background-color: rgba(0, 0, 0, 0.565);
+  border: solid 1px black;
+  border-radius: 50px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+
+  text-transform: capitalize;
+  font-size: 11pt;
+}
+#album_page_pill img {
+  width: 30px;
+  height: 30px;
+}
+
+//ALBUM PAGE HEADER//
+.album_pg_header {
+  display: flex;
+  padding: 30px;
+  text-transform: capitalize;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: flex-end;
+}
+#album_pg_header_img {
+  width: 250px;
+  height: 250px;
+  -webkit-box-shadow: 5px 5px 15px 5px #00000074;
+  box-shadow: 5px 5px 15px 5px #00000077;
+}
+
+.album_page_header_text_box {
+  color: white;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  top: 50px;
+}
+
+#album_page_header_album_word {
+  font-size: 10pt;
+  text-transform: uppercase;
+}
+
+#album_page_header_song_title {
+  font-size: 60pt;
+}
+
+#album_page_header_last_row {
+  list-style-type: none;
+  display: flex;
+  position: relative;
+  flex-wrap: nowrap;
+  right: 30px;
+  margin-top: 20px;
+  flex-direction: row;
+  align-items: center;
+}
+
+#album_page_header_last_row img {
+  height: 25px;
+  width: 25px;
+  border-radius: 100%;
+  position: relative;
+  bottom: 6px;
+}
+
+#album_page_header_song_author {
+  padding-left: 3px;
+  padding-right: 3px;
+  font-size: 12pt;
+  font-weight: bold;
+}
+#album_page_header_song_year {
+  padding-left: 3px;
+  padding-right: 3px;
+  font-weight: lighter;
+  font-size: 12pt;
+}
+#album_page_header_song_number_of_tracks {
+  padding-left: 3px;
+  padding-right: 3px;
+  font-weight: lighter;
+  font-size: 12pt;
+}
+#album_page_header_song_album_length {
+  padding-left: 3px;
+  padding-right: 3px;
+  font-weight: lighter;
+  font-size: 12pt;
+  color: rgba(255, 255, 255, 0.504);
+}
+
+//ALBUM PAGE BOTTONI SECTION//
+#album_page_middle_buttons {
+  list-style-type: none;
+  display: flex;
+  padding: 30px;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: flex-start;
+}
+#album_page_play_button {
+  background-color: #1ed760;
+  border-radius: 50%;
+  scale: 160%;
+  margin-right: 20px;
+}
+#album_page_play_button:hover {
+  scale: 170%;
+}
+#album_page_heart_button {
+  background-color: #2d2d2d00;
+  color: #b7bbc0;
+  border: none;
+  scale: 160%;
+  margin-right: 20px;
+}
+
+#album_page_heart_button:hover {
+  color: white;
+}
+
+#album_page_download_button {
+  background-color: #2d2d2d00;
+  color: #b7bbc0;
+  border: none;
+  scale: 160%;
+  margin-right: 20px;
+}
+
+#album_page_download_button:hover {
+  color: white;
+}
+#album_page_3points_button {
+  background-color: #2d2d2d00;
+  color: #b7bbc0;
+  border: none;
+  scale: 160%;
+}
+#album_page_3points_button:hover {
+  color: white;
+}
+
+//ALBUM PAGE TRACKS LIST SECTION//
+
+
+
+//ALBUM PAGE ALTRO DI $AUTHOR SECTION//
+
+#altro_section h3 {
+  color: white;
+  font-size: 24px;
+}
+
+#altro_card {
+  background-color: #2d2d2d;
+  border-radius: 5px;
+  width: 225px;
+  min-height: 3px;
+  margin: 5px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  cursor: pointer;
+  text-transform: capitalize;
+}
+#altro_card img {
+  width: 200px;
+  height: 200px;
+  padding: 5px;
+  margin-top: 5px;
+  border-radius: 15px;
+}
+
+#altro_card:hover {
+  background-color: #414141;
+  border-radius: 5px;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: baseline;
+  justify-content: flex-start;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+#altro_card h4 {
+  color: white;
+  font-size: 18px;
+}
+#altro_card h5 {
+  font-size: 14px;
+}
+//codice cards//

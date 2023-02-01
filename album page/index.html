@@ -16,7 +16,7 @@
     />
     <link rel="stylesheet" href="./assets/scss/style.css" />
 
-    <title>Spotify Clone</title>
+    <title>Spotify Clone: ALBUM PAGE</title>
   </head>
 
   <body>
@@ -25,7 +25,7 @@
 
       <!--COLONNA SINISTRA-->
 
-      <div class="col-3">
+      <div class="col-2">
         <article>
           <div class="page-wrapper chiller-theme toggled">
             <a id="show-sidebar" class="btn btn-sm btn-dark" href="#">
@@ -81,265 +81,154 @@
 
       <!--COLONNA CENTRALE-->
 
-      <div class="col-7">
-        <div class="col d-flex flex-column">
-          <nav class="d-flex justify-content-between align-items-center w-100">
-            <div class="d-flex flex-row justify-content-center align-items">
-              <a href=""
-                ><ion-icon
-                  class="p-2 me-2 rounded-circle bg-dark text-light"
-                  name="chevron-back-outline"
-                ></ion-icon
-              ></a>
-              <a href=""
-                ><ion-icon
-                  class="p-2 rounded-circle bg-dark text-light"
-                  name="chevron-forward-outline"
-                ></ion-icon
-              ></a>
-            </div>
+      <div class="col-8">
+        <!--MEGA CONTENITORE-->
 
-            <div class="btn-group">
-              <button
-                type="button"
-                class="btn btn-dark rounded-pill text-light dropdown-toggle"
-                data-toggle="dropdown"
-                aria-haspopup="true"
-                aria-expanded="false"
-              >
-                <ion-icon class="me-2" name="person-circle-outline"></ion-icon>
-                Nome Profilo
-              </button>
-              <div class="dropdown-menu bg-dark dropdown-menu-right">
-                <button class="dropdown-item bg-dark text-light" type="button">
-                  Account
-                </button>
-                <button class="dropdown-item bg-dark text-light" type="button">
-                  Profilo
-                </button>
-                <button class="dropdown-item bg-dark text-light" type="button">
-                  Effettua l'upgrade premium
-                </button>
-                <button class="dropdown-item bg-dark text-light" type="button">
-                  Assistenza
-                </button>
-                <button class="dropdown-item bg-dark text-light" type="button">
-                  Download
-                </button>
-                <button class="dropdown-item bg-dark text-light" type="button">
-                  Impostazioni
-                </button>
-                <button class="dropdown-item bg-dark text-light" type="button">
-                  Esci
-                </button>
-              </div>
+        <nav class="navbar navbar-expand-lg" id="album_pg_nav">
+          <div class="container-fluid">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" href="#"
+                  ><i
+                    class="bi bi-arrow-left-circle text-light text-bg-dark"
+                  ></i>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#"
+                  ><i
+                    class="bi bi-arrow-right-circle text-light text-bg-dark"
+                  ></i>
+                </a>
+              </li>
+            </ul>
+            <span id="album_page_pill">
+              <ul class="navbar-nav">
+                <li>
+                  <a class="nav-link" href="#"
+                    ><img src="http://placekitten.com/100/100" />
+                  </a>
+                </li>
+                <li>
+                  <a class="nav-link text-light" href="#">name surname</a>
+                </li>
+                <li>
+                  <a class="nav-link text-light" href="#"
+                    ><i class="bi bi-caret-down-fill text-light"></i>
+                  </a>
+                </li>
+              </ul>
+            </span>
+          </div>
+        </nav>
+
+        <div class="container d-flex align-items-center album_pg_header">
+          <div>
+            <a href="#"><img src="http://placekitten.com/200/200" /></a>
+          </div>
+          <div>
+            <div class="album_page_head_text">
+              <h6>Album</h6>
+              <h1>Song Title</h1>
+              <h5>Author</h5>
+              <h5>Listen latest release of Author</h5>
+              <p>
+                <button id="artist_page_play_button">Play</button>
+                <button id="artist_page_save_button">Save</button>
+                <button id="artist_page_3points_button">...</button>
+              </p>
             </div>
-          </nav>
-          <section class="container w-100 mt-5">
-            <div
-              class="card bg-dark col-12 d-flex w-100 h-100 flex-row justify-content-between align-items-center"
-            >
-              <img
-                src="https://www.ibs.it/images/0602498606377_0_536_0_75.jpg"
-                class="card-img-top bg-dark w-50 h-100"
-                alt="..."
-              />
-              <div
-                id="first-card"
-                class="card-body w-25 h-100 d-flex flex-column justify-content-between"
-              >
-                <div class="w-100 d-flex justify-content-between">
-                  <p>ALBUM</p>
-                  <a class="btn rounded-pill">NASCONDI ANNUNCI</a>
-                </div>
-                <h5 class="card-title">ALBUM title</h5>
-                <p class="card-text">Qui va il nome dell'artista</p>
-                <p class="card-text">Ascolta il singolo di Vattelapesca!</p>
-                <div class="d-flex">
-                  <a href="#" class="btn btn-success rounded-pill w-25">Play</a>
-                  <a
-                    href="#"
-                    class="btn btn-dark border border-light rounded-pill w-25"
-                    >Salva</a
-                  >
-                </div>
-              </div>
-            </div>
-          </section>
-          <section class="container mt-5">
-            <h2>Buonasera</h2>
+            <div></div>
+          </div>
+        </div>
+        <!--BUONASERA SECTION-->
+        <div class="container mt-4" id="buonasera_section">
+          <h3>Good Evening</h3>
+          <div class="container">
             <div class="row">
-              <div
-                id="buonasera"
-                class="card bg-dark col-4 d-flex flex-row justify-content-between align-items-center"
-              >
-                <img
-                  src="https://www.ibs.it/images/0602498606377_0_536_0_75.jpg"
-                  class="card-img-top bg-dark w-50 h-75"
-                  alt="..."
-                />
-                <div
-                  class="card-body w-25 h-25 d-flex flex-column justify-content-between"
-                >
-                  <h5 class="card-title">ALBUM title</h5>
-                </div>
+              <div class="col-4" id="buonasera_card">
+                <a href="#"><img src="http://placekitten.com/100/100" /></a>
+                <p>song title</p>
               </div>
-              <div
-                id="buonasera"
-                class="card bg-dark col-4 d-flex flex-row justify-content-between align-items-center"
-              >
-                <img
-                  src="https://www.ibs.it/images/0602498606377_0_536_0_75.jpg"
-                  class="card-img-top bg-dark w-50 h-75"
-                  alt="..."
-                />
-                <div
-                  class="card-body w-25 h-25 d-flex flex-column justify-content-between"
-                >
-                  <h5 class="card-title">ALBUM title</h5>
-                </div>
+              <div class="col-4" id="buonasera_card">
+                <a href="#"><img src="http://placekitten.com/100/100" /></a>
+                <p>song title</p>
               </div>
-              <div
-                id="buonasera"
-                class="card bg-dark col-4 d-flex flex-row justify-content-between align-items-center"
-              >
-                <img
-                  src="https://www.ibs.it/images/0602498606377_0_536_0_75.jpg"
-                  class="card-img-top bg-dark w-50 h-75"
-                  alt="..."
-                />
-                <div
-                  class="card-body w-25 h-25 d-flex flex-column justify-content-between"
-                >
-                  <h5 class="card-title">ALBUM title</h5>
-                </div>
+              <div class="col-4" id="buonasera_card">
+                <a href="#"><img src="http://placekitten.com/100/100" /></a>
+                <p>song title</p>
               </div>
-              <div
-                id="buonasera"
-                class="card bg-dark col-4 d-flex flex-row justify-content-between align-items-center"
-              >
-                <img
-                  src="https://www.ibs.it/images/0602498606377_0_536_0_75.jpg"
-                  class="card-img-top bg-dark w-50 h-75"
-                  alt="..."
-                />
-                <div
-                  class="card-body w-25 h-25 d-flex flex-column justify-content-between"
-                >
-                  <h5 class="card-title">ALBUM title</h5>
-                </div>
+              <div class="col-4" id="buonasera_card">
+                <a href="#"><img src="http://placekitten.com/100/100" /></a>
+                <p>song title</p>
               </div>
-              <div
-                id="buonasera"
-                class="card bg-dark col-4 d-flex flex-row justify-content-between align-items-center"
-              >
-                <img
-                  src="https://www.ibs.it/images/0602498606377_0_536_0_75.jpg"
-                  class="card-img-top bg-dark w-50 h-75"
-                  alt="..."
-                />
-                <div
-                  class="card-body w-25 h-25 d-flex flex-column justify-content-between"
-                >
-                  <h5 class="card-title">ALBUM title</h5>
-                </div>
+              <div class="col-4" id="buonasera_card">
+                <a href="#"><img src="http://placekitten.com/100/100" /></a>
+                <p>song title</p>
               </div>
-              <div
-                id="buonasera"
-                class="card bg-dark col-4 d-flex flex-row justify-content-between align-items-center"
-              >
-                <img
-                  src="https://www.ibs.it/images/0602498606377_0_536_0_75.jpg"
-                  class="card-img-top bg-dark w-50 h-75"
-                  alt="..."
-                />
-                <div
-                  class="card-body w-25 h-25 d-flex flex-column justify-content-between"
-                >
-                  <h5 class="card-title">ALBUM title</h5>
-                </div>
+              <div class="col-4" id="buonasera_card">
+                <a href="#"><img src="http://placekitten.com/100/100" /></a>
+                <p>song title</p>
               </div>
             </div>
-          </section>
+          </div>
+        </div>
 
-          <section class="container d-flex flex-column w-100 mt-5">
-            <div class="d-flex w-100 justify-content-between">
-              <h3>Altro di ciò che ti piace</h3>
-              <a class="btn rounded-pill">VISUALIZZA TUTTO</a>
-            </div>
-            <div class="d-flex justify-content-between w-100">
-              <div class="card" style="width: 15rem">
+        <!--ALTRO DI CIO CHE TI PIACE SECTION-->
+        <div class="container mt-4" id="altro_section">
+          <h3>Altro di ciò che ti piace</h3>
+          <div class="container">
+            <div class="row">
+              <div class="col-2" id="altro_card">
                 <img
-                  src="https://www.ibs.it/images/0602498606377_0_536_0_75.jpg"
-                  class="card-img-top"
-                  alt="..."
+                  src="https://i.scdn.co/image/ab67616d0000b2733b5e11ca1b063583df9492db"
                 />
-                <div class="card-body bg-dark text-light">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">
-                    Some quick example text to build on the card title and make
-                    up the bulk of the card's content.
-                  </p>
-                </div>
-              </div>
-              <div class="card" style="width: 15rem">
-                <img
-                  src="https://www.ibs.it/images/0602498606377_0_536_0_75.jpg"
-                  class="card-img-top"
-                  alt="..."
-                />
-                <div class="card-body bg-dark text-light">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">
-                    Some quick example text to build on the card title and make
-                    up the bulk of the card's content.
-                  </p>
-                </div>
-              </div>
-              <div class="card" style="width: 15rem">
-                <img
-                  src="https://www.ibs.it/images/0602498606377_0_536_0_75.jpg"
-                  class="card-img-top"
-                  alt="..."
-                />
-                <div class="card-body bg-dark text-light">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">
-                    Some quick example text to build on the card title and make
-                    up the bulk of the card's content.
-                  </p>
-                </div>
-              </div>
-              <div class="card" style="width: 15rem">
-                <img
-                  src="https://www.ibs.it/images/0602498606377_0_536_0_75.jpg"
-                  class="card-img-top"
-                  alt="..."
-                />
-                <div class="card-body bg-dark text-light">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">
-                    Some quick example text to build on the card title and make
-                    up the bulk of the card's content.
-                  </p>
-                </div>
-              </div>
-              <div class="card" style="width: 15rem">
-                <img
-                  src="https://www.ibs.it/images/0602498606377_0_536_0_75.jpg"
-                  class="card-img-top"
-                  alt="..."
-                />
-                <div class="bg-dark text-light card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">
-                    Some quick example text to build on the card title and make
-                    up the bulk of the card's content.
-                  </p>
-                </div>
+
+                <h4>Today's Top Hits</h4>
+                <h5>Rema & Selena Gomez are on top of the...</h5>
               </div>
             </div>
-          </section>
+            <div class="row">
+              <div class="col-2" id="altro_card">
+                <img
+                  src="https://i.scdn.co/image/ab67616d0000b2733b5e11ca1b063583df9492db"
+                />
+
+                <h4>Today's Top Hits</h4>
+                <h5>Rema & Selena Gomez are on top of the...</h5>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-2" id="altro_card">
+                <img
+                  src="https://i.scdn.co/image/ab67616d0000b2733b5e11ca1b063583df9492db"
+                />
+
+                <h4>Today's Top Hits</h4>
+                <h5>Rema & Selena Gomez are on top of the...</h5>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-2" id="altro_card">
+                <img
+                  src="https://i.scdn.co/image/ab67616d0000b2733b5e11ca1b063583df9492db"
+                />
+
+                <h4>Today's Top Hits</h4>
+                <h5>Rema & Selena Gomez are on top of the...</h5>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-2" id="altro_card">
+                <img
+                  src="https://i.scdn.co/image/ab67616d0000b2733b5e11ca1b063583df9492db"
+                />
+
+                <h4>Today's Top Hits</h4>
+                <h5>Rema & Selena Gomez are on top of the...</h5>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -391,12 +280,20 @@
       <div class="col">
         <div class="row flex-nowrap">
           <div class="col col-bg d-flex align-items-center">
-            <a href="#"><img src="http://placekitten.com/70/70" /></a>
-            <div>
-              <p>song title</p>
-              <p>artist</p>
+            <a href="#"
+              ><img src="http://placekitten.com/70/70" id="player_left_img"
+            /></a>
+            <div id="player_left_text">
+              <ul>
+                <li id="player_left_text_li">
+                  <a href="#"><h5>song title</h5></a>
+                </li>
+                <li id="player_left_text_li">
+                  <a href="#"><h6>artist</h6></a>
+                </li>
+              </ul>
             </div>
-            <div><i class="bi bi-heart-fill"></i></div>
+            <div id="player_left_icon"><i class="bi bi-heart-fill"></i></div>
           </div>
 
           <div
@@ -425,7 +322,7 @@
               <span>3:00</span>
             </div>
           </div>
-          <div class="col col-bg d-flex align-items-center">
+          <div class="col col-bg" id="player_right_items">
             <div class="player-buttons-right d-flex">
               <a href="#"><i class="bi bi-mic-fill"></i></a>
               <a href="#"><i class="bi bi-card-list"></i></a>

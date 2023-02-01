@@ -544,13 +544,11 @@ body a:hover {
 }
 
 .header {
-  background: rgb(40, 40, 40);
-  padding: 10px;
+  background: rgb(20, 20, 20);
   color: rgb(170, 170, 170);
   border-bottom: 1px solid rgb(24, 24, 24);
   display: flex;
-  flex-flow: row wrap;
-  align-items: center;
+  justify-content: center;
 }
 .header .page-flows .flow {
   font-size: 20px;
@@ -604,7 +602,7 @@ body a:hover {
   border: none;
 }
 .header .user__actions .dropdown-menu {
-  background: rgb(40, 40, 40);
+  background: rgb(20, 20, 20);
   margin-top: 25px;
   border-radius: 2px;
   padding: 0;
@@ -616,7 +614,7 @@ body a:hover {
   position: absolute;
   top: -30px;
   right: 7px;
-  color: rgb(40, 40, 40);
+  color: rgb(20, 20, 20);
   font-size: 36px;
 }
 .header .user__actions .dropdown-menu a {
@@ -645,38 +643,10 @@ body a:hover {
   display: flex;
   flex-flow: row wrap;
 }
-.content__left {
-  width: 15%;
-}
-.content__middle {
-  width: 70%;
-}
-.content__right {
-  width: 15%;
-}
-@media (max-width: 1400px) {
-  .content__left {
-    width: 20%;
-  }
-  .content__middle {
-    width: 80%;
-  }
-  .content__right {
-    display: none;
-  }
-}
-@media (max-width: 768px) {
-  .content__left {
-    width: 100%;
-  }
-  .content__middle {
-    width: 100%;
-  }
-}
 
 .navigation {
   padding: 15px;
-  background: rgb(40, 40, 40);
+  background: rgb(20, 20, 20);
   color: rgb(170, 170, 170);
   overflow-y: scroll;
 }
@@ -710,39 +680,14 @@ body a:hover {
   display: block;
 }
 
-@media (max-width: 768px) {
-  .navigation {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-around;
-  }
-  .navigation__list {
-    margin-bottom: 0;
-    width: 33.3333333333%;
-    text-align: center;
-  }
-  .navigation__list__item {
-    width: 100%;
-    text-align: center;
-  }
-  .navigation__list__item i {
-    display: none;
-  }
-  .navigation__list__item span {
-    margin: 0 auto;
-  }
-  .navigation__list__item:hover {
-    border: none;
-  }
-}
 .playlist {
   padding: 15px;
-  background: rgb(40, 40, 40);
+  background: rgb(20, 20, 20);
   border-top: 1px solid rgb(24, 24, 24);
   border-bottom: 1px solid rgb(24, 24, 24);
 }
 .playlist:hover {
-  background: #424242;
+  background: #2e2e2e;
 }
 .playlist:hover a {
   color: rgb(255, 255, 255);
@@ -762,13 +707,8 @@ body a:hover {
   margin-right: 15px;
 }
 
-@media (max-width: 768px) {
-  .playlist {
-    display: none;
-  }
-}
 .playing {
-  background: rgb(40, 40, 40);
+  background: rgb(20, 20, 20);
   border-bottom: 1px solid rgb(24, 24, 24);
   display: flex;
   flex-flow: row nowrap;
@@ -803,7 +743,7 @@ body a:hover {
   }
 }
 .current-track {
-  background: rgb(40, 40, 40);
+  background: rgb(20, 20, 20);
   padding: 5px 15px;
   display: flex;
   flex-flow: row wrap;
@@ -987,12 +927,14 @@ body a:hover {
   }
 }
 .artist {
-  height: 617px;
+  width: 100%;
+  height: 96%;
   overflow-y: scroll;
 }
 .artist__header {
-  height: 320px;
-  border-bottom: 1px solid rgb(40, 40, 40);
+  width: 100%;
+  height: 338px;
+  border-bottom: 1px solid rgb(20, 20, 20);
   position: relative;
   background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/7022/spotify_img_bground.png);
   background-size: cover;
@@ -1190,7 +1132,7 @@ body a:hover {
 .artist__content .overview__artist .latest-release__song {
   width: calc(100% - 75px);
   padding: 10px 15px;
-  background: rgb(40, 40, 40);
+  background: rgb(20, 20, 20);
   color: rgb(170, 170, 170);
   display: flex;
   flex-flow: column wrap;
@@ -1278,17 +1220,17 @@ body a:hover {
   padding-right: 10px;
 }
 .tracks .track {
-  border-top: 1px solid rgb(40, 40, 40);
+  border-top: 1px solid rgb(20, 20, 20);
   height: 42px;
   display: flex;
   flex-flow: row wrap;
   align-items: center;
 }
 .tracks .track:hover {
-  background: rgb(40, 40, 40);
+  background: rgb(20, 20, 20);
 }
 .tracks .track:last-child {
-  border-bottom: 1px solid rgb(40, 40, 40);
+  border-bottom: 1px solid rgb(20, 20, 20);
 }
 .tracks .track__art img {
   width: 42px;
@@ -1337,8 +1279,8 @@ body a:hover {
 .tracks .track__explicit .label {
   border: 1px;
   border-style: solid;
-  border-color: #424242;
-  color: #424242;
+  border-color: #2e2e2e;
+  color: #2e2e2e;
   text-transform: uppercase;
 }
 .tracks .track__plays {
@@ -1379,12 +1321,12 @@ body a:hover {
   flex-flow: column wrap;
 }
 .related-artists .related-artist {
-  background: rgb(40, 40, 40);
+  background: rgb(20, 20, 20);
   padding: 5px;
   margin-bottom: 2px;
 }
 .related-artists .related-artist:hover {
-  background: #373737;
+  background: #232323;
   text-decoration: none;
 }
 .related-artists .related-artist__img img {
@@ -1431,7 +1373,7 @@ body a:hover {
   margin-top: 30px;
 }
 .overview__albums__head {
-  border-bottom: 1px solid rgb(40, 40, 40);
+  border-bottom: 1px solid rgb(20, 20, 20);
   margin-bottom: 10px;
   display: flex;
   flex-flow: row wrap;
@@ -1443,7 +1385,7 @@ body a:hover {
   margin-bottom: 4px;
 }
 .overview__albums__head .view-type .active {
-  background: rgb(40, 40, 40);
+  background: rgb(20, 20, 20);
   padding: 8px;
   border-radius: 50%;
 }
@@ -1454,7 +1396,7 @@ body a:hover {
 .overview__albums__head .view-type i:hover {
   padding: 8px;
   border-radius: 50%;
-  background: #353535;
+  background: #212121;
   cursor: pointer;
 }
 
@@ -1566,7 +1508,7 @@ body a:hover {
 }
 .media-cards .media-card__footer {
   display: block;
-  background: rgb(40, 40, 40);
+  background: rgb(20, 20, 20);
   padding: 15px;
   color: rgb(255, 255, 255);
 }
@@ -1596,7 +1538,7 @@ body a:hover {
 
 ::-webkit-scrollbar-thumb {
   border-radius: 4px;
-  background: #373737;
+  background: #232323;
 }
 
 @media (max-width: 650px) {

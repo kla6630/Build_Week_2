@@ -1,0 +1,50 @@
+$special-gray: rgb(15, 14, 14) !important;
+$special-gray2: rgb(82, 82, 82) !important;
+
+body {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif,
+    monospace;
+  color: #b8bfce;
+  background-color: $special-gray;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+#impostazioni {
+  border-bottom: 1px solid lightgray;
+}
+
+#bg-secondar,
+#btn-secondar {
+  background-color: $special-gray !important;
+}
+
+#menu {
+  background-color: $special-gray;
+  border-color: $special-gray2;
+  color: lightgray;
+}
+
+#first-card {
+  height: 30rem !important;
+  padding-left: 5rem;
+  width: 1rem !important;
+  p,
+  a,
+  h5 {
+    object-fit: contain;
+  }
+}
+
+#buonasera {
+  height: 5rem !important;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}

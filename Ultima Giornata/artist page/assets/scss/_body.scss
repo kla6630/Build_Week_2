@@ -1,0 +1,27 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
+
+$special-gray: rgb(15, 14, 14) !important;
+$special-gray2: rgb(82, 82, 82) !important;
+
+body{
+    
+     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif, monospace;
+    color: #b8bfce;
+    background-color: $special-gray;
+}
+
+
+html,
+body,
+.container {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  right: 0;
+  left: 0;
+}
+
+
+
+
+

@@ -9,3 +9,356 @@
 
 //album page//
 @import "./_albumpage.scss";
+
+
+
+
+
+
+
+footer{
+    margin-left: 2rem  !important;
+}
+
+
+
+
+
+// MEDIA QUERIES
+
+
+
+
+
+@media  screen and (min-width: 50px) and (max-width:1199px) {
+
+
+    body{
+        width: 424px;
+        padding: 0px !important;
+        
+    }
+
+    footer{
+        width: 300px !important
+    }
+
+    #row{
+        display:flex;
+        flex-direction: column !important
+    }
+#first-card{
+    display:none !important
+}
+#img-center{
+    margin: 0 auto !important;
+}
+#id-buonasera{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 0 auto !important;
+    
+    
+}
+
+
+#section1 .card:hover{
+    background-color: transparent !important;
+}
+
+#section1 .card{
+    width: 30% !important;
+}
+
+
+#id-altro{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    margin: 0 auto !important;
+    
+    a{
+        width: 100%;
+        margin-left: 1rem;
+    }
+}
+
+
+#buonasera{
+    width: 20rem !important;
+    margin: 0 auto !important;
+    margin-bottom: 20px !important;
+    align-items: center !important;
+    h5{
+        margin-top: 20px !important;
+    }
+}
+#card-altro{
+    width: 20rem !important;
+    margin: 0 auto !important;
+    margin-bottom: 20px !important;
+    align-items: center !important;
+    h5{
+        margin-top: 20px !important;
+    }
+}
+
+    #column-sx {
+        display: none;
+
+    }
+    #center-column{
+        order: 3;
+        margin: 0 auto;
+
+        width: 100%;
+
+    }
+    #SidebarDX{
+        
+        display: none;
+
+    }
+
+    #row{
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+
+        // background-color: rgb(67, 66, 66) !important;
+        width: 100%;
+        text-align: center;
+margin: 0 auto;
+    }
+    #column-sx article {
+        order: 1;
+        height: 20% !important;
+        display: flex;
+        flex-direction: row;
+        
+
+    }
+
+
+
+    #column-sx{
+        display: none;
+
+    }
+    #center-column{
+        order: 3;
+        margin: 0 auto;
+
+        width: 100%;
+
+    }
+    #SidebarDX{
+        
+        display: none;
+
+    }
+
+
+    #section1 .card{
+        background-color: transparent !important;
+        border: none !important;
+        margin-left: 110px !important
+    }
+    
+ #id-altro{
+    
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    margin: 0 auto !important;
+    
+    a{
+        width: 100%;
+        margin-left: 1rem;
+    }
+
+
+ }
+    
+
+
+ #sidebar{
+    display: none !important;
+}
+}
+
+
+@media  screen and (min-width:436px) and (max-width:1199px) {
+    body{
+        // background-color: rgb(67, 66, 66) !important;
+        width: 100%!important;
+        height: 100%;
+        margin: 0 auto !important;
+        
+        // overflow: hidden;
+
+     }
+
+.btn-group{
+    display:none
+}
+     footer{
+        margin-left: 2rem  !important;
+    }
+*{
+    background-color: purple !important;
+} 
+#sidebar{
+    display: none !important;
+}
+
+
+
+#footer{
+    border-top: 1px solid #000;
+    
+}
+
+
+#altro_card{
+    border: 1px solid #000 !important;
+}
+     #id-buonasera{
+        margin-left: 6rem !important;
+     }
+     #buonasera .card{
+        margin: 0 auto !important
+     }
+//     #section1 .card:hover{
+//         background-color: transparent !important;
+//     }
+
+//     #section1 .card{
+//         width: 30% !important;
+//     }
+    
+//     footer{
+//         width: 850px !important
+//     }
+
+// #section2 .card{
+//     width:230px
+// }     
+// #section3 .card{
+//     width: 160px !important;
+//     margin-right: 60px !important
+// }
+// .card-title{
+//     word-break: none !important;
+// }
+// #section3{
+//     margin-bottom: 0px !important;
+// }
+
+
+//     #row{
+//         display:flex;
+//         flex-direction: column;
+//         justify-content: center;
+
+//         background-color: rgb(67, 66, 66) !important;
+//         width: 100%;
+//         text-align: center;
+// margin: 0 auto;
+//     }
+//     #column-sx article {
+//         order: 1;
+//         height: 20% !important;
+//         display: flex;
+//         flex-direction: row;
+        
+
+//     }
+
+//     #first-card{
+//         display:none !important;
+//         background-color: transparent !important;
+//     }
+//     #img-center{
+//         margin: 0 auto !important;
+//         width: 100% !important;
+//         margin-left: 55px !important;
+        
+//     }
+
+//     #column-sx{
+//         display: none;
+
+//     }
+//     #center-column{
+//         order: 3;
+//         margin: 0 auto;
+
+//         width: 100%;
+
+//     }
+//     #SidebarDX{
+        
+//         display: none;
+//         visibility: hidden;
+
+//     }
+
+    #nav-central{
+        width: 87% !important;
+        margin-bottom: 3rem !important;
+        
+    }
+
+    
+//     #section1 .card{
+//         background-color: transparent !important;
+//         border: none !important;
+//         margin-left: 200px !important
+//     }
+
+    footer{
+        width: 750px;
+        margin-left: 20px;
+    }
+    #section4{
+        width: 100%;
+    }
+}
+
+@media  screen and (min-width:1200px)  {
+    #row{
+        display:flex;
+        flex-direction: row
+    }
+    #column-sx {
+        order: 1;
+
+    }
+    #center-column{
+        order: 2;
+
+    }
+    
+
+    // #other-icon{
+    //     display: none;
+    // }
+
+    
+#first-card{
+    margin-left: 200px;
+}
+
+
+#section1{
+    height: 30rem !important;
+    cursor: pointer;
+}
+    
+}
+

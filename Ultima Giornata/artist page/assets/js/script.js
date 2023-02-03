@@ -1,63 +1,63 @@
 
 
-let url = new URLSearchParams (location.search);//prendi parametri di ricerca dall url della pagina
+// let url = new URLSearchParams (location.search);//prendi parametri di ricerca dall url della pagina
 
-let id = url.get("id");//da local host : 5005 /artist.html?id=125->125
+// let id = url.get("id");//da local host : 5005 /artist.html?id=125->125
 
 
-window.onload = async () => {
-    if (!id) window.location.assign('/index.html'); 
-    Promise.all([fetchArtist(id), fetchTracks(id), filterPopular()]);
+// window.onload = async () => {
+//     if (!id) window.location.assign('/index.html'); 
+//     Promise.all([fetchArtist(id), fetchTracks(id), filterPopular()]);
 
-};
-const APIUrl = "https://striveschool-api.herokuapp.com/api/deezer";
+// };
+// const APIUrl = "https://striveschool-api.herokuapp.com/api/deezer";
 
-//fetch artista per id
-const fetchArtist = async(id) => {
-    try{
-        let res = await fetch (`${APIUrl}/artist/${id} `); //fetcha dati artista per id (=>id privine da url di inizio file)
-        let artist = await res.json();
+// //fetch artista per id
+// const fetchArtist = async(id) => {
+//     try{
+//         let res = await fetch (`${APIUrl}/artist/${id} `); //fetcha dati artista per id (=>id privine da url di inizio file)
+//         let artist = await res.json();
 
-        //inserisci nome artista copertina e numero di fan
+//         //inserisci nome artista copertina e numero di fan
      
-        populateElement(".artist__header img", "src", artist.picture_xl );
-        populateElement("h1", "innerText", artist.name );
+//         populateElement(".artist__header img", "src", artist.picture_xl );
+//         populateElement("h1", "innerText", artist.name );
 
-        populateElement("monthly__listeners span.listeners ", "innerText ", artist.nb_fan);
-    } catch(error) {
-        let alert = document.querySelector('.alert strong');
-        alert.innerText = error;
-        alert.parentElement.classList.add('show');
-    }
-};
-
-
-//stessa funziona di index  JS    
+//         populateElement("monthly__listeners span.listeners ", "innerText ", artist.nb_fan);
+//     } catch(error) {
+//         let alert = document.querySelector('.alert strong');
+//         alert.innerText = error;
+//         alert.parentElement.classList.add('show');
+//     }
+// };
 
 
-const populateElement = (elementQuery, prop, value) => {
-    let elementToPop = document.querySelector(elementQuery);
-    elementToPop[prop] =  value;
+// //stessa funziona di index  JS    
+
+
+// const populateElement = (elementQuery, prop, value) => {
+//     let elementToPop = document.querySelector(elementQuery);
+//     elementToPop[prop] =  value;
 
 
 
-};
+// };
 
 
-//=> fetcha le prime 50 canzoni dell'artista nell'id 
+// //=> fetcha le prime 50 canzoni dell'artista nell'id 
 
-const fetchTracks = async(id) => {
-    try{
-        let res = await fetch(`${APIUrl}/artist/${id}/top?limit=50`);
-        let {data:tracks} = await res.json();
-        let trackContainer = document.querySelector('.artist__popular-tracks');
-        tracks.forEach((song, i) => {
-            //per ogni canzone crea una riga nella tabella delle canzoni 
-            trackContainer.innerHTML += ``
-        }) 
-// quello che c'è nel dollaro è: song.title son.artist.name song.preview son.album.cover_big
-    } catch{}
-}
+// const fetchTracks = async(id) => {
+//     try{
+//         let res = await fetch(`${APIUrl}/artist/${id}/top?limit=50`);
+//         let {data:tracks} = await res.json();
+//         let trackContainer = document.querySelector('.artist__popular-tracks');
+//         tracks.forEach((song, i) => {
+//             //per ogni canzone crea una riga nella tabella delle canzoni 
+//             trackContainer.innerHTML += ``
+//         }) 
+// // quello che c'è nel dollaro è: song.title son.artist.name song.preview son.album.cover_big
+//     } catch{}
+// }
 
 
 
@@ -99,181 +99,332 @@ const fetchTracks = async(id) => {
 
 
 
-const APIUrl = "https://striveschool-api.herokuapp.com/api/deezer/search?q="
+//  const APIUrl = "https://striveschool-api.herokuapp.com/api/deezer/search?q="
   
-const fetchByQuery = async (query) => {
-  const res = await fetch(`${APIUrl}${query}`)
-  // const {data:[,song]} = await res.json()
-  const { data: songs } = await res.json()
-  return songs
-}
+//  const fetchByQuery = async (query) => {
+//    const res = await fetch(`${APIUrl}${query}`)
+//     const {data:[,song]} = await res.json()
+//    const { data: songs } = await res.json()
+//    return songs
+//  }
 
-//Sezione 1
-
-
-const renderFavoriteSongs1 = async () => {
-let canzoni = await fetchByQuery("techno")
-console.log(canzoni)
-let row = document.querySelector("#artist-info")
-let canzoniPrefe = [canzoni[1]]
-canzoniPrefe.forEach((album) => {
-  row.innerHTML += `
-  
-      
-  <div class="">
-
-   <div class="profile__img">
-                    <img
-                      src=${album.album.cover}
-                      alt="G-Eazy"
-                    />
-                  </div>
-
-                  <div class="artist__info__meta">
-                    <div class="artist__info__type">Artist</div>
-
-                    <div class="artist__info__name">${album.artist.name}</div>
-
-                    <div class="artist__info__actions">
-                      <button class="button-dark">
-                        <i class="ion-ios-play"></i>
-                        Play
-                      </button>
-
-                      <button class="button-light">Follow</button>
-                    </div>
-
-                  </div>
-                </div>
-                </div>
-
-                <div class="artist__listeners">
-                  <div class="artist__listeners__count">15,662,810</div>
-                  
-                  <div class="artist__listeners__label">Monthly Listeners</div>
-                  
-                </div>
-                
+ //Sezione 1
 
 
-                   
-
-
-                   
-                   `
-})
-}
-
-
-renderFavoriteSongs1()
-//Sezione dopo artist info
-
-
-const renderFavoriteSongs2 = async () => {
-let canzoni = await fetchByQuery("techno")
-console.log(canzoni)
-let row = document.querySelector("#artist-info")
-let canzoniPrefe = [canzoni[1],canzoni[1],canzoni[1],canzoni[1],canzoni[1]]
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-canzoniPrefe.forEach((album) => {
-  row.innerHTML += `
+//  const renderFavoriteSongs1 = async () => {
+//  let canzoni = await fetchByQuery("techno")
+//  console.log(canzoni)
+//  let row = document.querySelector("#artist-info")
+//  let canzoniPrefe = [canzoni[1]]
+//  canzoniPrefe.forEach((album) => {
+//    row.innerHTML += `
   
       
-  <div class="">
+   
+//    <div class="profile__img">
+//    <img
+//      src=${album.album.cover}
+//      alt="G-Eazy"
+//    />
+//  </div>
 
+
+//  <div class="artist__info__meta">
+//    <div class="artist__info__type">Artist</div>
+
+//    <div class="artist__info__name">${album.artist.name}</div>
+
+
+//    <div class="artist__info__actions">
+//      <button class="button-dark">
+//        <i class="ion-ios-play"></i>
+//        Play
+//      </button>
+
+//      <button class="button-light">Follow</button>
+//    </div>
+
+
+                   
+
+
+                   
+//                     `
+//  })
+//  }
+
+
+ 
+
+
+
+
+ const APIUrl = "https://striveschool-api.herokuapp.com/api/deezer/search?q="
+
+ const fetchByQuery = async (query) => {
+   const res = await fetch(`${APIUrl}${query}`)
+   // const {data:[,song]} = await res.json()
+   const { data: songs } = await res.json()
+   return songs
+ }
+ 
+ //prima sezione
+ const renderFavoriteSongs = async () => {
+   let canzoni = await fetchByQuery("blues")
+   let row = document.querySelector("#artist-inf")
+   let canzoniPrefe = [canzoni[2]]
+   canzoniPrefe.forEach((album) => {
+     row.innerHTML += `
+
+     
+   
    <div class="profile__img">
-                    <img
-                      src=${album.album.cover}
-                      alt="G-Eazy"
-                    />
-                  </div>
-
-                  <div class="artist__info__meta">
-                    <div class="artist__info__type">Artist</div>
-
-                    <div class="artist__info__name">${album.artist.name}</div>
-
-                    <div class="artist__info__actions">
-                      <button class="button-dark">
-                        <i class="ion-ios-play"></i>
-                        Play
-                      </button>
-
-                      <button class="button-light">Follow</button>
-                    </div>
-
-                  </div>
-                </div>
-                </div>
-
-                <div class="artist__listeners">
-                  <div class="artist__listeners__count">15,662,810</div>
-                  
-                  <div class="artist__listeners__label">Monthly Listeners</div>
-                  
-                </div>
-                
-
-                <div class="track">
-                            <div class="track__art">
-                              <img
-                                src=${album.album.cover}
-                                alt="When It's Dark Out"
-                              />
-                            </div>
-
-                            <div class="track__number">1</div>
-
-                            <div class="track__added">
-                              <i class="ion-checkmark-round added"></i>
-                            </div>
-
-                            <div class="track__title">${album.album.cover}</div>
-
-                            <div class="track__explicit">
-                              <span class="label">Explicit</span>
-                            </div>
-
-                            <div class="track__plays">147,544,165</div>
-                          </div>
+   <img
+     src=${album.album.cover}
+     alt="G-Eazy"
+   />
+ </div>
 
 
-                   
+ <div class="artist__info__meta">
+   <div class="artist__info__type">Artist</div>
+
+   <div class="artist__info__name">${album.artist.name}</div>
 
 
-                   
-                   `
-})
+   <div class="artist__info__actions">
+     <button class="button-dark">
+       <i class="ion-ios-play"></i>
+       Play
+     </button>
+
+     <button class="button-light">Follow</button>
+   </div>
+
+
+         `
+   })
+ }
+
+
+
+
+
+
+ window.onload = async () => {
+  
+  await renderFavoriteSongs()
+  await renderFavoriteSongs1()
+  await renderFavoriteSongs2()
+  
 }
 
 
-renderFavoriteSongs2()
+
+
+ 
+ //seconda sezione
+ const renderFavoriteSongs1 = async () => {
+   let canzoni = await fetchByQuery("blues")
+   console.log(canzoni)
+   let row = document.querySelector("#track-popular")
+   let canzoniPrefe = [canzoni[2],canzoni[6],canzoni[8],canzoni[10],canzoni[16],canzoni[1],canzoni[5],canzoni[7],canzoni[9],canzoni[15]]
+   canzoniPrefe.forEach((album) => {
+     row.innerHTML += `
+
+     
+   
+
+
+
+
+   <div class="track">
+   <div class="track__art">
+     <img
+       src=${album.album.cover}
+       alt="When It's Dark Out"
+     />
+   </div>
+
+   <div class="track__number"></div>
+
+   <div class="track__added">
+     <i class="ion-checkmark-round added"></i>
+   </div>
+
+   <div class="track__title">${album.artist.name}</div>
+
+   <div class="track__explicit">
+     <span class="label">Explicit</span>
+   </div>
+
+   <div class="track__plays"></div>
+ </div>
+
+
+
+         `
+   })
+ }
+
+
+
+//  //terza sezione
+//  const renderFavoriteSongs2 = async () => {
+//    let canzoni = await fetchByQuery("blues")
+//    console.log(canzoni)
+//    let row = document.querySelector("#track-song")
+//    let canzoniPrefe = [canzoni[2],canzoni[3],canzoni[4],canzoni[10],canzoni[16],canzoni[1],canzoni[0],canzoni[8],canzoni[11],canzoni[18],canzoni[22],canzoni[23],canzoni[24],canzoni[25],canzoni[26],]
+//    canzoniPrefe.forEach((album) => {
+//      row.innerHTML += `
+
+
+
+//                                      <div class="track mb-5 w-100 h-25 d-flex justify-content-center align-content-center" >
+//                                      <div class="track__number"></div>
+    
+//                                      <div class="track__added">
+//                                        <i class="ion-checkmark-round added"></i>
+//                                      </div>
+    
+//                                      <div class="track__title featured">
+//                                        <span class="title">${album.album.title}</span>
+//                                        <span class="feature">${album.album.title}</span>
+//                                        <span class="feature">${album.album.title}</span>
+//                                      </div>
+    
+//                                      <div class="track__explicit">
+//                                        <span class="label">Explicit</span>
+//                                      </div>
+    
+//                                      <div class="track__length"></div>
+    
+//                                      <div class="track__popularity">
+//                                        <i class="ion-arrow-graph-up-right"></i>
+//                                      </div>
+//                                    </div>
+
+
+
+
+
+
+
+
+
+
+//          `
+//    })
+//  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// // //Sezione dopo artist info
+
+
+// // const renderFavoriteSongs2 = async () => {
+// // let canzoni = await fetchByQuery("techno")
+// // console.log(canzoni)
+// // let row = document.querySelector("#artist-info")
+// // let canzoniPrefe = [canzoni[1],canzoni[1],canzoni[1],canzoni[1],canzoni[1]]
+
+
+
+// // canzoniPrefe.forEach((album) => {
+// //   row.innerHTML += `
+  
+      
+//   <div class="">
+
+//    <div class="profile__img">
+//                     <img
+//                       src=${album.album.cover}
+//                       alt="G-Eazy"
+//                     />
+//                   </div>
+
+//                   <div class="artist__info__meta">
+//                     <div class="artist__info__type">Artist</div>
+
+//                     <div class="artist__info__name">${album.artist.name}</div>
+
+//                     <div class="artist__info__actions">
+//                       <button class="button-dark">
+//                         <i class="ion-ios-play"></i>
+//                         Play
+//                       </button>
+
+//                       <button class="button-light">Follow</button>
+//                     </div>
+
+//                   </div>
+//                 </div>
+//                 </div>
+
+//                 <div class="artist__listeners">
+//                   <div class="artist__listeners__count">15,662,810</div>
+                  
+//                   <div class="artist__listeners__label">Monthly Listeners</div>
+                  
+//                 </div>
+                
+
+//                 <div class="track">
+//                             <div class="track__art">
+//                               <img
+//                                 src=${album.album.cover}
+//                                 alt="When It's Dark Out"
+//                               />
+//                             </div>
+
+//                             <div class="track__number">1</div>
+
+//                             <div class="track__added">
+//                               <i class="ion-checkmark-round added"></i>
+//                             </div>
+
+//                             <div class="track__title">${album.album.cover}</div>
+
+//                             <div class="track__explicit">
+//                               <span class="label">Explicit</span>
+//                             </div>
+
+//                             <div class="track__plays">147,544,165</div>
+//                           </div>
+
+
+                   
+
+
+                   
+//                    `
+// })
+// }
+
+
+// renderFavoriteSongs2()
   
 //   <section class="header">
 //             <div class="content__middle">
@@ -350,6 +501,10 @@ renderFavoriteSongs2()
   
 //                               <div class="track__plays">147,544,165</div>
 //                             </div>
+
+
+
+
   
 //                             <div class="track">
 //                               <div class="track__art">
@@ -534,6 +689,21 @@ renderFavoriteSongs2()
 //                           </div>
 //                         </div>
   
+
+
+
+
+
+
+
+
+
+// inizio
+
+
+
+
+
 //                         <div class="overview__albums">
 //                           <div class="overview__albums__head">
 //                             <span class="section-title">Albums</span>
@@ -581,7 +751,32 @@ renderFavoriteSongs2()
 //                                   </div>
 //                                 </div>
   
-//                                 <div class="track">
+//                                 <div id ="track-song" class="track">
+
+
+
+
+
+
+
+
+
+
+
+// fine
+
+
+
+
+
+
+
+
+
+
+
+
+
 //                                   <div class="track__number">1</div>
   
 //                                   <div class="track__added">
@@ -601,6 +796,16 @@ renderFavoriteSongs2()
 //                                   </div>
 //                                 </div>
   
+
+
+
+
+
+
+
+
+
+
 //                                 <div class="track">
 //                                   <div class="track__number">2</div>
   
@@ -974,95 +1179,255 @@ renderFavoriteSongs2()
   
   
   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   
   
   
-  // devo inserire url
-let url = new URLSearchParams(location.search);
+//   // devo inserire url
+// let url = new URLSearchParams(location.search);
 
-// mi prendo dall'url il vaore result
-let id = url.get("idArtist");
-console.log(id);
+// // mi prendo dall'url il vaore result
+// let id = url.get("idArtist");
+// console.log(id);
 
-let api = "https://striveschool-api.herokuapp.com/api/deezer/artist/";
-let endpoint = "/top?limit=50";
-const fetchArtist = async () => {
-  let res = await fetch(api + id);
-  let artist = await res.json();
-  return artist;
-};
+// let api = "https://striveschool-api.herokuapp.com/api/deezer/artist/";
+// let endpoint = "/top?limit=50";
+// const fetchArtist = async () => {
+//   let res = await fetch(api + id);
+//   let artist = await res.json();
+//   return artist;
+// };
 
-let artist = async () => {
-  let artista = await fetchArtist();
-  let bodyCard = document.getElementById("cardPageArtist");
-  bodyCard.innerHTML = `
-        <div class="card border-0 text-bg-dark p-0">
-        <img id="cardOverlay"
-          src="${artista.picture_big}"
-          class="card-img rounded-0" alt="..." />
-        <div class="card-img-overlay d-flex flex-column justify-content-between justify-content-md-end textBox">
-          <div class="arrow arrowMobile d-flex justify-content-center align-items-center">
-            <i class="bi bi-chevron-left d-flex d-md-none"></i>
-          </div>
-          <p class="hiddenMobile">
-            <i class="bi bi-patch-check-fill me-2 hiddenMobile"></i><small>Artista verificato</small>
-          </p>
-          <h5 class="card-title">${artista.name}</h5>
-          <p class="card-text downMobile">
-            <small>${artista.nb_fan} ascoltatori mensili</small>
-          </p>
-        </div>
-      </div>
-        `;
-};
+// let artist = async () => {
+//   let artista = await fetchArtist();
+//   let bodyCard = document.getElementById("cardPageArtist");
+//   bodyCard.innerHTML = `
+//         <div class="card border-0 text-bg-dark p-0">
+//         <img id="cardOverlay"
+//           src="${artista.picture_big}"
+//           class="card-img rounded-0" alt="..." />
+//         <div class="card-img-overlay d-flex flex-column justify-content-between justify-content-md-end textBox">
+//           <div class="arrow arrowMobile d-flex justify-content-center align-items-center">
+//             <i class="bi bi-chevron-left d-flex d-md-none"></i>
+//           </div>
+//           <p class="hiddenMobile">
+//             <i class="bi bi-patch-check-fill me-2 hiddenMobile"></i><small>Artista verificato</small>
+//           </p>
+//           <h5 class="card-title">${artista.name}</h5>
+//           <p class="card-text downMobile">
+//             <small>${artista.nb_fan} ascoltatori mensili</small>
+//           </p>
+//         </div>
+//       </div>
+//         `;
+// };
 
-let tracks = async () => {
+// let tracks = async () => {
+//   try {
+//     let res = await fetch(api + id + endpoint);
+//     if (res.ok) {
+//       let data = await res.json();
+//       let tracks = data.data;
+//       let div = document.getElementById("cardPageTracks");
+//       for (let i = 0; i < tracks.length; i++) {
+//         let numb = i + 1;
+//         let durata = [];
+//         durata.push(tracks[i].duration);
+//         let stringDurata = durata[0].toString();
+//         let pippo = stringDurata.split("");
+//         pippo.splice(1, 0, ":");
+//         let finalDurata = pippo.join("");
+
+//         console.log(finalDurata);
+//         div.innerHTML += `
+//         <div class="d-flex mt-2 justify-content-between align-items-center hoverArtist">
+//           <div class="left d-flex align-items-center">
+//             <p class="me-3 numbRanks">${numb}</p>
+//             <img id="smallCover" src="${tracks[i].album.cover_small}" alt=""
+//                 class="me-3" />
+//             <div>
+//               <p class="noneMobile albumName">${tracks[i].title}</p>
+//               <p class="noneDesktop">276.968.994</p>
+//             </div>
+//           </div>
+//           <div class="center">
+//             <p>${tracks[i].rank}</p>
+//           </div>
+//           <div class="right">
+//             <p class="">${finalDurata}</p>
+//             <i class="bi bi-three-dots"></i>
+//           </div>
+//         </div>
+//         `;
+//       }
+//     }
+//   } catch (error) {
+//     console.log("error");
+//   }
+// };
+
+// window.onload = async function () {
+//   await artist();
+//   await tracks();
+// };
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//Sezione Player
+
+
+
+const asyncAwaitExample7 = async function () {
   try {
-    let res = await fetch(api + id + endpoint);
+    let res = await fetch(
+      "https://striveschool-api.herokuapp.com/api/deezer/search?q= the highlights "
+    );
+
+    console.log(res);
     if (res.ok) {
       let data = await res.json();
-      let tracks = data.data;
-      let div = document.getElementById("cardPageTracks");
-      for (let i = 0; i < tracks.length; i++) {
-        let numb = i + 1;
-        let durata = [];
-        durata.push(tracks[i].duration);
-        let stringDurata = durata[0].toString();
-        let pippo = stringDurata.split("");
-        pippo.splice(1, 0, ":");
-        let finalDurata = pippo.join("");
+      console.log("data", data);
 
-        console.log(finalDurata);
-        div.innerHTML += `
-        <div class="d-flex mt-2 justify-content-between align-items-center hoverArtist">
-          <div class="left d-flex align-items-center">
-            <p class="me-3 numbRanks">${numb}</p>
-            <img id="smallCover" src="${tracks[i].album.cover_small}" alt=""
-                class="me-3" />
-            <div>
-              <p class="noneMobile albumName">${tracks[i].title}</p>
-              <p class="noneDesktop">276.968.994</p>
+      let listReference = document.querySelector("#footer");
+
+      data.data.forEach((album) => {
+        if (album.id === 1225758602) {
+          listReference.innerHTML =
+            listReference.innerHTML +
+            `
+            
+                  
+                  
+                  
+
+
+
+
+
+
+
+
+            <div class="col">
+            <div class="row flex-nowrap">
+              <div class="col col-bg d-flex align-items-center">
+                <a href="#"
+                  ><img src=${album.album.cover} id="player_left_img"
+                /></a>
+                <div id="player_left_text">
+                  <ul>
+                    <li id="player_left_text_li">
+                      <a class="text-decoration-none" href="#"><h5>${album.title}</h5></a>
+                    </li>
+                    <li id="player_left_text_li">
+                      <a class="text-decoration-none" href="#"><h6>${album.artist.name}</h6></a>
+                    </li>
+                  </ul>
+                </div>
+                <div id="player_left_icon"><i class="bi bi-heart-fill"></i></div>
+              </div>
+    
+              <div
+                class="col col-bg d-flex flex-wrap flex-column justify-content-between align-items-center"
+              >
+                <div class="player-buttons d-flex">
+                  <a href="#"><i class="bi bi-shuffle"></i> </a>
+                  <a href="#"><i class="bi bi-skip-start-fill"></i> </a>
+                  <a href="#"
+                    ><i class="player-button-play bi bi-play-circle-fill"></i>
+                  </a>
+                  <a href="#"><i class="bi bi-skip-end-fill"></i> </a>
+                  <a href="#"><i class="bi bi-repeat"></i> </a>
+                </div>
+    
+                <div class="player-timeline d-flex">
+                  <span>0:00</span>
+                  <progress
+                    class="player-progress-bar"
+                    id="file"
+                    max="100"
+                    value="20"
+                  >
+                    100%
+                  </progress>
+                  <span>3:00</span>
+                </div>
+              </div>
+              <div class="col col-bg" id="player_right_items">
+                <div class="player-buttons-right d-flex">
+                  <a href="#"><i class="bi bi-mic-fill"></i></a>
+                  <a href="#"><i class="bi bi-card-list"></i></a>
+                  <a href="#"><i class="bi bi-pc-display"></i></a>
+                  <div class="d-flex justify-content-center align-items-center">
+            <a href="#"><i class="bi bi-volume-down"></i></a>
+            <progress
+              class="player-volume-bar mb-4"
+              id="file"
+              max="100"
+              value="20"
+            >
+              100%
+            </progress>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="center">
-            <p>${tracks[i].rank}</p>
-          </div>
-          <div class="right">
-            <p class="">${finalDurata}</p>
-            <i class="bi bi-three-dots"></i>
-          </div>
-        </div>
-        `;
-      }
+
+
+
+
+
+                  
+                  `;
+        }
+      });
+    } else {
+      console.log("Qualcosa è andato storto con la nostra chiamata!");
     }
   } catch (error) {
-    console.log("error");
+    console.log(error);
   }
 };
 
-window.onload = async function () {
-  await artist();
-  await tracks();
-};
-  
-  
+asyncAwaitExample7();

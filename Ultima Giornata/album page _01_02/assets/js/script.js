@@ -182,3 +182,136 @@ window.onload= async ()=>{
 
 
 
+
+
+
+
+//Sezione Player
+
+
+
+const asyncAwaitExample7 = async function () {
+  try {
+    let res = await fetch(
+      "https://striveschool-api.herokuapp.com/api/deezer/search?q= the highlights "
+    );
+
+    console.log(res);
+    if (res.ok) {
+      let data = await res.json();
+      console.log("data", data);
+
+      let listReference = document.querySelector("#footer");
+
+      data.data.forEach((album) => {
+        if (album.id === 1225758602) {
+          listReference.innerHTML =
+            listReference.innerHTML +
+            `
+            
+                  
+                  
+                  
+
+
+
+
+
+
+
+
+            <div class="col">
+            <div class="row flex-nowrap">
+              <div class="col col-bg d-flex align-items-center">
+                <a href="#"
+                  ><img src=${album.album.cover} id="player_left_img"
+                /></a>
+                <div id="player_left_text">
+                  <ul>
+                    <li id="player_left_text_li">
+                      <a class="text-decoration-none" href="#"><h5>${album.title}</h5></a>
+                    </li>
+                    <li id="player_left_text_li">
+                      <a class="text-decoration-none" href="#"><h6>${album.artist.name}</h6></a>
+                    </li>
+                  </ul>
+                </div>
+                <div id="player_left_icon"><i class="bi bi-heart-fill"></i></div>
+              </div>
+    
+              <div
+                class="col col-bg d-flex flex-wrap flex-column justify-content-between align-items-center"
+              >
+                <div class="player-buttons d-flex">
+                  <a href="#"><i class="bi bi-shuffle"></i> </a>
+                  <a href="#"><i class="bi bi-skip-start-fill"></i> </a>
+                  <a href="#"
+                    ><i class="player-button-play bi bi-play-circle-fill"></i>
+                  </a>
+                  <a href="#"><i class="bi bi-skip-end-fill"></i> </a>
+                  <a href="#"><i class="bi bi-repeat"></i> </a>
+                </div>
+    
+                <div class="player-timeline d-flex">
+                  <span>0:00</span>
+                  <progress
+                    class="player-progress-bar"
+                    id="file"
+                    max="100"
+                    value="20"
+                  >
+                    100%
+                  </progress>
+                  <span>3:00</span>
+                </div>
+              </div>
+              <div class="col col-bg" id="player_right_items">
+                <div class="player-buttons-right d-flex">
+                  <a href="#"><i class="bi bi-mic-fill"></i></a>
+                  <a href="#"><i class="bi bi-card-list"></i></a>
+                  <a href="#"><i class="bi bi-pc-display"></i></a>
+                  <div class="d-flex justify-content-center align-items-center">
+            <a href="#"><i class="bi bi-volume-down"></i></a>
+            <progress
+              class="player-volume-bar mb-4"
+              id="file"
+              max="100"
+              value="20"
+            >
+              100%
+            </progress>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+
+
+                  
+                  `;
+        }
+      });
+    } else {
+      console.log("Qualcosa è andato storto con la nostra chiamata!");
+    }
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+asyncAwaitExample7();
+
+
+
+
+
+
+
+
+
+
+
+
+
